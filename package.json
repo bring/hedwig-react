@@ -1,0 +1,32 @@
+{
+  "name": "@posten/hedwig-react",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Bring Design System - React library",
+  "author": "Posten Norge AS",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bring/hedwig-react"
+  },
+  "contributors": [
+    {
+      "name": "Viggo Normann"
+    }
+  ],
+  "license": "BSD-2-Clause",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c --name \"hedwig-react\" --output.file dist/index.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": "8.9.0",
+    "npm": "6.5.0"
+  },
+  "devDependencies": {
+    "rollup": "^1.10.1",
+    "rollup-plugin-jsx": "^1.0.3"
+  }
+}
