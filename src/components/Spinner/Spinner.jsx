@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Spinner({children}) {
+export default function Spinner() {
     return(
-        <div className="hw-spinner">{children}</div>
+        <div className="hw-spinner"></div>
     )
 }
