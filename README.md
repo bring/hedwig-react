@@ -1,13 +1,30 @@
-# Hedwig - React
-Bring Design System - React library
+# hedwig-react
 
+> Hedwig react components
+
+[![NPM](https://img.shields.io/npm/v/hedwig-react.svg)](https://www.npmjs.com/package/hedwig-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+## Install
+
+```bash
+npm install --save hedwig-react
 ```
-npm install
-npm run build
-```
+
+## Usage
 
 ```jsx
-import Card from hedwigReact;
+import React, { Component } from 'react'
 
-<Card title, text, imgUrl />
+import MyComponent from 'hedwig-react'
+import 'hedwig-react/dist/index.css'
+
+class Example extends Component {
+  render() {
+    return <MyComponent />
+  }
+}
 ```
+
+## License
+
+MIT © [hellehi](https://github.com/hellehi)
