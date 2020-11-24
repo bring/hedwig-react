@@ -6,7 +6,7 @@ class SecondaryButton extends React.Component {
 
     render() {
         return (
-            <Button color="secondary" size={this.props.size} disabled={this.props.disabled}>{this.props.children}</Button>
+            <Button variant="secondary" size={this.props.size} disabled={this.props.disabled}>{this.props.children}</Button>
             );
     }
 

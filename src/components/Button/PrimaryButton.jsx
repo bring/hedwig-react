@@ -6,7 +6,7 @@ class PrimaryButton extends React.Component {
 
     render() {
         return (
-            <Button color="primary" size={this.props.size} disabled={this.props.isDisabled}>{this.props.children}</Button>
+            <Button variant="primary" size={this.props.size} disabled={this.props.disabled}>{this.props.children}</Button>
             );
     }
 

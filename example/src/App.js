@@ -22,8 +22,6 @@ const App = () => {
   <Button>Normal button</Button>
   <PrimaryButton>Primary button</PrimaryButton>
   <SecondaryButton>Secondary button</SecondaryButton>
-  <Button variant="outline">Outlined button</Button>
-  <Button variant="outline" color="secondary">Secondary outlined button</Button>
 
   </div>
   <div className="hw-block hw-block--mb-medium-2">
