@@ -1,20 +1,20 @@
 import React from "react";
-import { render } from "react-dom";
 import PropTypes from 'prop-types';
 
 class Button extends React.Component {
 
   render() {
-    const buttonVariant = this.props.variant != "" ? "hw-button--"+this.props.variant : "";
-    const buttonColor = this.props.color ? "hw-button--"+this.props.color : "";
+    var buttonVariant = this.props.variant != "" ? "hw-button--"+this.props.variant : "";
+    const buttonColor = (this.props.color && this.props.variant == '') ? "hw-button--"+this.props.color : "";
+    const buttonSize = this.props.size ? "hw-button--"+this.props.size : "";
 
 
     return (
       <button
       type={this.props.type}
-      className={`hw-button ${buttonVariant} ${buttonColor}`}
+      className={`hw-button ${buttonVariant} ${buttonColor} ${buttonSize}`}
       onClick= {this.props.onClick}
-      disabled= {this.props.isDisabled}
+      disabled= {this.props.disabled}
 
       >{this.props.children}
       </button>
@@ -24,16 +24,18 @@ class Button extends React.Component {
 
 Button.defaultProps = {
   variant : "",
-  color : "primary",
+  color : "",
   type : 'button',
-  isDisabled : false,
+  disabled : false,
 };
 
 Button.propTypes = {
   color : PropTypes.oneOf(['primary', 'secondary']),
-  variant : PropTypes.oneOf(['', 'outlined']),
+  variant : PropTypes.oneOf(['', 'outline-primary','outline-secondary', 'outline-white']),
   type : PropTypes.oneOf(['button', 'submit']),
+  size : PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
 };
 
 
 export default Button;
+

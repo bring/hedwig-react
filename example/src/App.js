@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { Button } from 'hedwig-react'
+import { PrimaryButton } from 'hedwig-react'
+import { SecondaryButton } from 'hedwig-react'
 import { Card } from 'hedwig-react'
 import 'hedwig-react/dist/index.css'
 
@@ -18,7 +20,11 @@ const App = () => {
   </div>
   <div className="hw-block hw-block--mb-medium-2">
   <Button>Normal button</Button>
-  <Button color="secondary">Secondary button</Button>
+  <PrimaryButton>Primary button</PrimaryButton>
+  <SecondaryButton>Secondary button</SecondaryButton>
+  <Button variant="outline">Outlined button</Button>
+  <Button variant="outline" color="secondary">Secondary outlined button</Button>
+
   </div>
   <div className="hw-block hw-block--mb-medium-2">
   <h2>Cards</h2>

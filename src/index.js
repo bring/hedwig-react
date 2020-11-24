@@ -6,4 +6,6 @@ export const ExampleComponent = ({ text }) => {
 }
 
 export { default as Button } from './components/Button/Button.jsx'
+export { default as PrimaryButton } from './components/Button/PrimaryButton.jsx'
+export { default as SecondaryButton } from './components/Button/SecondaryButton.jsx'
 export { default as Card } from './components/Card/Card.jsx'
