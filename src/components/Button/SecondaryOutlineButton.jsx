@@ -6,7 +6,7 @@ class SecondaryOutlineButton extends React.Component {
 
     render() {
         return (
-            <Button variant="outline-secondary" size={this.props.size} disabled={this.props.disabled}>{this.props.children}</Button>
+            <Button variant="outline-secondary" size={this.props.size} disabled={this.props.disabled} onClick={this.props.onClick}>{this.props.children}</Button>
             );
     }
 
@@ -19,6 +19,7 @@ SecondaryOutlineButton.defaultProps = {
 
 SecondaryOutlineButton.propTypes = {
   size : PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
+  onClick: PropTypes.func,
 };
 
 export default SecondaryOutlineButton;

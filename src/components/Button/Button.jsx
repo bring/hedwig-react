@@ -31,6 +31,7 @@ Button.propTypes = {
   variant : PropTypes.oneOf(['', 'primary', 'secondary', 'outline-primary','outline-secondary', 'outline-white']),
   type : PropTypes.oneOf(['button', 'submit']),
   size : PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
+  onClick: PropTypes.func,
 };
 
 

@@ -6,6 +6,10 @@ import { SecondaryButton } from 'hedwig-react'
 import { Card } from 'hedwig-react'
 import 'hedwig-react/dist/index.css'
 
+function testButton(e) {
+  alert("Button pressed");
+}
+
 const App = () => {
   return <div className="hw-container">
   <div className="hw-block hw-block--mb-large-2">
@@ -20,7 +24,7 @@ const App = () => {
   </div>
   <div className="hw-block hw-block--mb-medium-2">
   <Button>Normal button</Button>
-  <PrimaryButton>Primary button</PrimaryButton>
+  <PrimaryButton onClick={(e) => testButton(e)}>Primary button</PrimaryButton>
   <SecondaryButton>Secondary button</SecondaryButton>
 
   </div>

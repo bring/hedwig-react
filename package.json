@@ -22,7 +22,8 @@
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
-    "storybook": "start-storybook -p 6006",
+    "storybook-posten": "STORYBOOK_THEME=posten start-storybook -p 6006",
+    "storybook-bring": "STORYBOOK_THEME=bring start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
