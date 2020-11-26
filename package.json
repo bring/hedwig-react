@@ -2,7 +2,7 @@
   "name": "hedwig-react",
   "version": "1.0.0",
   "description": "Hedwig react components",
-  "author": "hellehi",
+  "author": "Posten",
   "license": "MIT",
   "repository": "bring/hedwig-react",
   "main": "dist/index.js",
