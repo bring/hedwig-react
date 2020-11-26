@@ -6,7 +6,7 @@ class PrimaryButton extends React.Component {
 
     render() {
         return (
-            <Button variant="primary" size={this.props.size} disabled={this.props.disabled} onClick={this.props.onClick}>{this.props.children}</Button>
+            <Button variant="primary" type={this.props.type} size={this.props.size} disabled={this.props.disabled} onClick={this.props.onClick}>{this.props.children}</Button>
             );
     }
 
@@ -15,10 +15,12 @@ class PrimaryButton extends React.Component {
 PrimaryButton.defaultProps = {
   size : 'small',
   disabled : false,
+  type: 'button'
 };
 
 PrimaryButton.propTypes = {
   size : PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
+  type : PropTypes.oneOf(['button', 'submit']),
   onClick: PropTypes.func,
 };
 
