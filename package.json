@@ -1,5 +1,6 @@
 {
   "name": "hedwig-react",
+  "homepage": "http://bring.github.io/hedwig-react",
   "version": "1.0.0",
   "description": "Hedwig react components",
   "author": "Posten",
@@ -24,7 +25,13 @@
     "deploy": "gh-pages -d example/build",
     "storybook-posten": "STORYBOOK_THEME=posten start-storybook -p 6006",
     "storybook-bring": "STORYBOOK_THEME=bring start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
     "build-storybook": "build-storybook"
+
+
   },
   "peerDependencies": {
     "react": "^16.0.0"
