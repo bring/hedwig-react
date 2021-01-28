@@ -1,5 +1,5 @@
 {
-  "name": "hedwig-react",
+  "name": "@posten/hedwig-react",
   "homepage": "http://bring.github.io/hedwig-react",
   "version": "1.0.0",
   "description": "Hedwig react components",
