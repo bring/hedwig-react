@@ -1,11 +1,14 @@
 {
   "name": "@posten/hedwig-react",
   "homepage": "http://bring.github.io/hedwig-react",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Hedwig react components",
   "author": "Posten",
   "license": "MIT",
-  "repository": "bring/hedwig-react",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bring/hedwig-react"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -21,20 +24,18 @@
     "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
     "storybook-posten": "STORYBOOK_THEME=posten start-storybook -p 6006",
     "storybook-bring": "STORYBOOK_THEME=bring start-storybook -p 6006",
     "build-storybook": "build-storybook",
-
-    "predeploy": "npm run build-storybook",
+    "predeploy-storybook": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static"
 
 
 
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^17.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
@@ -60,8 +61,8 @@
     "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-scripts": "^3.4.1"
   },
   "files": [
