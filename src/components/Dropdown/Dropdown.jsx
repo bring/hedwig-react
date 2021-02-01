@@ -2,41 +2,38 @@ import React from "react";
 import { render } from "react-dom";
 import PropTypes from 'prop-types';
 
-class Dropdown extends React.Component {
+export default function Dropdown({label, name, variant, id, selected, onChange, options}) {
 
-    render() {
-
-        const variant = this.props.variant != "" ? "hw-dropdown--"+this.props.variant : "";
+  const variantClass = variant != "" ? "hw-dropdown--"+variant : "";
         var items = '';
-        if (this.props.options) {
-           items = this.props.options.map((item, index) =>
+        if (options) {
+           items = options.map((item, index) =>
             <option value={item.value} key={index}>{item.label}</option>
 
             );
         }
 
-
-        return (
+   return (
             <label className="hw-label">
-            {this.props.label}
+            {label}
             <select
-            name={this.props.name}
-            className={`hw-dropdown hw-dropdown--native ${variant}`}
-            id={this.props.id}
-            value={this.props.selected}
-            data-hw-dropdown={this.props.id}
-            onChange={this.props.onChange}
+            name={name}
+            className={`hw-dropdown hw-dropdown--native ${variantClass}`}
+            id={id}
+            value={selected}
+            data-hw-dropdown={id}
+            onChange={onChange}
             >
             {items}
             </select>
             </label>
 
             );
-    }
 }
 
 Dropdown.defaultProps = {
-    variant : ""
+    variant : "",
+    options : []
 };
 
 Dropdown.propTypes = {
@@ -44,4 +41,3 @@ Dropdown.propTypes = {
 };
 
 
-export default Dropdown;
