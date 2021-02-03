@@ -13,6 +13,7 @@ export { default as SecondaryButton } from './components/Button/SecondaryButton.
 export { default as PrimaryOutlineButton } from './components/Button/PrimaryOutlineButton.jsx'
 export { default as SecondaryOutlineButton } from './components/Button/SecondaryOutlineButton.jsx'
 export { default as LightOutlineButton } from './components/Button/LightOutlineButton.jsx'
+export { default as Dropdown } from './components/Dropdown/Dropdown.jsx'
 
 
 export { default as Card } from './components/Card/Card.jsx'
