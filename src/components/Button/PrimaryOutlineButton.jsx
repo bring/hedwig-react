@@ -13,7 +13,6 @@ class PrimaryOutlineButton extends React.Component {
 }
 
 PrimaryOutlineButton.defaultProps = {
-  size : 'small',
   disabled : false,
   type: 'button'
 };

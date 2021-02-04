@@ -13,7 +13,6 @@ class LightOutlineButton extends React.Component {
 }
 
 LightOutlineButton.defaultProps = {
-  size : 'small',
   disabled : false,
   type: 'button'
 };

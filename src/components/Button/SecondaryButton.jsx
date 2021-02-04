@@ -13,7 +13,6 @@ class SecondaryButton extends React.Component {
 }
 
 SecondaryButton.defaultProps = {
-  size : 'small',
   disabled : false,
   type: 'button'
 };

@@ -13,7 +13,6 @@ class PrimaryButton extends React.Component {
 }
 
 PrimaryButton.defaultProps = {
-  size : 'small',
   disabled : false,
   type: 'button'
 };

@@ -13,7 +13,6 @@ class SecondaryOutlineButton extends React.Component {
 }
 
 SecondaryOutlineButton.defaultProps = {
-  size : 'small',
   disabled : false,
   type: 'button'
 };
