@@ -2,13 +2,11 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-class PrimaryButton extends React.Component {
+export default function PrimaryButton({type, size, onClick, disabled, children}) {
 
-    render() {
         return (
-            <Button variant="primary" type={this.props.type} size={this.props.size} disabled={this.props.disabled} onClick={this.props.onClick}>{this.props.children}</Button>
+            <Button variant="primary" type={type} size={size} disabled={disabled} onClick={onClick}>{children}</Button>
             );
-    }
 
 }
 
@@ -23,4 +21,3 @@ PrimaryButton.propTypes = {
   onClick: PropTypes.func,
 };
 
-export default PrimaryButton;

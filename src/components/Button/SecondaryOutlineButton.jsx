@@ -2,13 +2,12 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-class SecondaryOutlineButton extends React.Component {
+export default function SecondaryOutlineButton({type, size, onClick, disabled, children}) {
 
-    render() {
         return (
-            <Button variant="outline-secondary" type={this.props.type} size={this.props.size} disabled={this.props.disabled} onClick={this.props.onClick}>{this.props.children}</Button>
+            <Button variant="outline-secondary" type={type} size={size} disabled={disabled} onClick={onClick}>{children}</Button>
             );
-    }
+
 
 }
 
@@ -23,4 +22,3 @@ SecondaryOutlineButton.propTypes = {
   type : PropTypes.oneOf(['button', 'submit']),
 };
 
-export default SecondaryOutlineButton;

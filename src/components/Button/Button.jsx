@@ -1,24 +1,21 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-class Button extends React.Component {
-
-  render() {
-    var buttonVariant = this.props.variant != "" ? "hw-button--"+this.props.variant : "";
-    const buttonSize = this.props.size ? "hw-button--"+this.props.size : "";
-
+export default function Button({variant, type, size, onClick, disabled, children}) {
+    const buttonVariant = variant != "" ? "hw-button--"+variant : "";
+    const buttonSize = size ? "hw-button--"+size : "";
 
     return (
       <button
-      type={this.props.type}
+      type={type}
       className={`hw-button ${buttonVariant} ${buttonSize}`}
-      onClick= {this.props.onClick}
-      disabled= {this.props.disabled}
+      onClick= {onClick}
+      disabled= {disabled}
 
-      >{this.props.children}
+      >{children}
       </button>
     );
-  }
+
 }
 
 Button.defaultProps = {
@@ -35,5 +32,5 @@ Button.propTypes = {
 };
 
 
-export default Button;
+
 

@@ -2,13 +2,11 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-class PrimaryOutlineButton extends React.Component {
+export default function PrimaryOutlineButton({type, size, onClick, disabled, children}) {
 
-    render() {
         return (
-            <Button variant="outline-primary" type={this.props.type} size={this.props.size} disabled={this.props.disabled} onClick={this.props.onClick}>{this.props.children}</Button>
+            <Button variant="outline-primary" type={type} size={size} disabled={disabled} onClick={onClick}>{children}</Button>
             );
-    }
 
 }
 
@@ -23,4 +21,3 @@ PrimaryOutlineButton.propTypes = {
   type : PropTypes.oneOf(['button', 'submit']),
 };
 
-export default PrimaryOutlineButton;

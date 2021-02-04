@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-class LightOutlineButton extends React.Component {
+export default function LightOutlineButton({type, size, onClick, disabled, children}) {
 
-    render() {
+
         return (
-            <Button variant="outline-white" type={this.props.type} size={this.props.size} disabled={this.props.disabled} onClick={this.props.onClick}>{this.props.children}</Button>
+            <Button variant="outline-white" type={type} size={size} disabled={disabled} onClick={onClick}>{children}</Button>
             );
-    }
+
 
 }
 
@@ -23,4 +23,3 @@ LightOutlineButton.propTypes = {
   type : PropTypes.oneOf(['button', 'submit']),
 };
 
-export default LightOutlineButton;

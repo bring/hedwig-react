@@ -2,13 +2,11 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-class SecondaryButton extends React.Component {
+export default function SecondaryButton({type, size, onClick, disabled, children}) {
 
-    render() {
         return (
-            <Button variant="secondary" type={this.props.type} size={this.props.size} disabled={this.props.disabled} onClick={this.props.onClick}>{this.props.children}</Button>
+            <Button variant="secondary" type={type} size={size} disabled={disabled} onClick={onClick}>{children}</Button>
             );
-    }
 
 }
 
@@ -23,4 +21,3 @@ SecondaryButton.propTypes = {
   type : PropTypes.oneOf(['button', 'submit']),
 };
 
-export default SecondaryButton;
