@@ -3,7 +3,7 @@ import DarkBadge from './DarkBadge';
 
 export default {
   title: 'Components/Badge/Dark',
-  component: DarkBadge,
+  component: DarkBadge
 };
 
 
