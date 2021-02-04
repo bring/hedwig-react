@@ -3,18 +3,8 @@ import { render } from "react-dom";
 import PropTypes from 'prop-types';
 import Dropdown from './Dropdown';
 
-class WhiteDropdown extends React.Component {
-
-    render() {
-
-
-
-        return (
-            <Dropdown variant="white" options={this.props.options}/>
+export default function WhiteDropdown({options}) {
+   return (
+            <Dropdown variant="white" options={options}/>
             );
-    }
 }
-
-
-
-export default WhiteDropdown;
