@@ -6,7 +6,7 @@ export default {
   component: Badge,
 };
 
-const Template = (args) => <Badge {...args}>Hmm</Badge>;
+const Template = (args) => <Badge {...args}>Badge</Badge>;
 
 export const Primary = Template.bind({});
 Primary.args = {

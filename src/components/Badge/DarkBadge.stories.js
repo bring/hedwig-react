@@ -7,6 +7,6 @@ export default {
 };
 
 
-const Template = (args) => <DarkBadge {...args}>Hmm</DarkBadge>;
+const Template = (args) => <DarkBadge {...args}>Badge</DarkBadge>;
 
 export const Dark = Template.bind({});
