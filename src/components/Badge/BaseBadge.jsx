@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-export default function BaseBadge(props) {
+export default function BaseBadge({variant, size, children}) {
     return (
-        <span className={`hw-badge ${props.size ? 'hw-badge--' + props.size : ''} ${props.variant ? 'hw-badge--' + props.variant : ''}`}>
-            {props.children}
+        <span className={`hw-badge ${size ? 'hw-badge--' + size : ''} ${variant ? 'hw-badge--' + variant : ''}`}>
+            {children}
         </span>
     )
 };

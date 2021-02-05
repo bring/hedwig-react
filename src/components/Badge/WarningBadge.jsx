@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from 'prop-types';
 import BaseBadge from './BaseBadge';
 
-export default function WarningBadge(props) {
+export default function WarningBadge({size, children}) {
     return (
-        <BaseBadge variant='warning' size={props.size}>
-            {props.children}
+        <BaseBadge variant='warning' size={size}>
+            {children}
         </BaseBadge>
     )
 };

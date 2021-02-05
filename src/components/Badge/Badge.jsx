@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from 'prop-types';
 import BaseBadge from './BaseBadge';
 
-export default function Badge(props) {
+export default function Badge({size, children}) {
     return (
-        <BaseBadge size={props.size}>
-            {props.children}
+        <BaseBadge size={size}>
+            {children}
         </BaseBadge>
     )
 };

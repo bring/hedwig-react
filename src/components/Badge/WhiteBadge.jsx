@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from 'prop-types';
 import BaseBadge from './BaseBadge';
 
-export default function WhiteBadge(props) {
+export default function WhiteBadge({size, children}) {
     return (
-        <BaseBadge variant='white' size={props.size}>
-            {props.children}
+        <BaseBadge variant='white' size={size}>
+            {children}
         </BaseBadge>
     )
 };
