@@ -19,6 +19,7 @@ const Template = (args) => <div style={{width:'220px'}}><WhiteDropdown {...args}
 
 export const td = Template.bind({});
 td.args = {
+  label:"Label",
   options : [
   {label:"Option 1", value:'1'}, {label:"Option 2", value:'2'}]
 };
