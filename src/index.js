@@ -15,5 +15,10 @@ export { default as LightOutlineButton } from './components/Button/LightOutlineB
 export { default as Dropdown } from './components/Dropdown/Dropdown.jsx'
 export { default as WhiteDropdown } from './components/Dropdown/WhiteDropdown.jsx'
 
+export { default as Badge } from './components/Badge/Badge.jsx'
+export { default as DarkBadge } from './components/Badge/DarkBadge.jsx'
+export { default as WarningBadge } from './components/Badge/WarningBadge.jsx'
+export { default as WhiteBadge } from './components/Badge/WhiteBadge.jsx'
+
 
 export { default as Card } from './components/Card/Card.jsx'
