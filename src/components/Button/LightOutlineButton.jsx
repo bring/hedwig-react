@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import Button from './Button';
+import BaseButton from './BaseButton';
 
 export default function LightOutlineButton({type, size, onClick, disabled, children}) {
 
 
         return (
-            <Button variant="outline-white" type={type} size={size} disabled={disabled} onClick={onClick}>{children}</Button>
+            <BaseButton variant="outline-white" type={type} size={size} disabled={disabled} onClick={onClick}>{children}</BaseButton>
             );
 
 

@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import Button from './Button';
+import BaseButton from './BaseButton';
 
 export default function PrimaryOutlineButton({type, size, onClick, disabled, children}) {
 
         return (
-            <Button variant="outline-primary" type={type} size={size} disabled={disabled} onClick={onClick}>{children}</Button>
+            <BaseButton variant="outline-primary" type={type} size={size} disabled={disabled} onClick={onClick}>{children}</BaseButton>
             );
 
 }
