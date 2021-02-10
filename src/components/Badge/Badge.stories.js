@@ -8,6 +8,4 @@ export default {
 
 const Template = (args) => <Badge {...args}>Badge</Badge>;
 
-export const Primary = Template.bind({});
-Primary.args = {
-};
+export const Default = Template.bind({});
