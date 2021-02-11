@@ -11,13 +11,14 @@ export default function Dropdown({
   onChange,
   options
 }) {
-  return
-  ;<BaseDropdown
-    variant={variant}
-    label={label}
-    id={id}
-    selected={selected}
-    onChange={onChange}
-    options={options}
-  />
-}
+  return (
+    <BaseDropdown
+      variant=''
+      label={label}
+      id={id}
+      selected={selected}
+      onChange={onChange}
+      options={options}
+    />
+  )
+  ;}
