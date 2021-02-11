@@ -20,5 +20,6 @@ export { default as DarkBadge } from './components/Badge/DarkBadge.jsx'
 export { default as WarningBadge } from './components/Badge/WarningBadge.jsx'
 export { default as WhiteBadge } from './components/Badge/WhiteBadge.jsx'
 
+export { default as Block } from './layout/Block/Block.jsx'
 
 export { default as Card } from './components/Card/Card.jsx'

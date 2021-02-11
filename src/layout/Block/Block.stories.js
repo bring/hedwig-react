@@ -2,7 +2,7 @@ import React from 'react';
 import Block from './Block';
 
 export default {
-  title: 'Components/Block',
+  title: 'Layout/Block',
   component: Block
 };
 
