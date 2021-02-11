@@ -7,28 +7,31 @@ export default function Input({
   placeholder,
   type,
   disabled,
-  variant,
+  errorMessage,
   onChange
 }) {
   return (
     <BaseInput
-      variant={variant}
       label={label}
       type={type}
       placeholder={placeholder}
       disabled={disabled}
+      onChange={onChange}
+      errorMessage={errorMessage}
     />
   )
 }
 
 Input.defaultProps = {
   disabled: false,
-  type: 'text',
-  variant: ''
+  type: 'text'
 }
 
 Input.propTypes = {
-  type: PropTypes.oneOf(['text', 'number']),
-  variant: PropTypes.oneOf(['', 'white']),
-  onChange: PropTypes.func
+  type: PropTypes.oneOf(['text', 'number', 'password']),
+  disabled: PropTypes.bool,
+  onChange: PropTypes.func,
+  errorMessage: PropTypes.string,
+  placeholder: PropTypes.string,
+  label: PropTypes.string
 }

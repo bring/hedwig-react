@@ -13,12 +13,13 @@ export default function SecondaryOutlineButton({type, size, onClick, disabled, c
 
 SecondaryOutlineButton.defaultProps = {
   disabled : false,
-  type: 'button'
+  type: 'button',
 };
 
 SecondaryOutlineButton.propTypes = {
-  size : PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
+  type: PropTypes.oneOf(['button', 'submit']),
   onClick: PropTypes.func,
-  type : PropTypes.oneOf(['button', 'submit']),
+  disabled: PropTypes.bool,
 };
 

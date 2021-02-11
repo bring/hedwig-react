@@ -12,12 +12,13 @@ export default function PrimaryOutlineButton({type, size, onClick, disabled, chi
 
 PrimaryOutlineButton.defaultProps = {
   disabled : false,
-  type: 'button'
+  type: 'button',
 };
 
 PrimaryOutlineButton.propTypes = {
-  size : PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
+  type: PropTypes.oneOf(['button', 'submit']),
   onClick: PropTypes.func,
-  type : PropTypes.oneOf(['button', 'submit']),
+  disabled: PropTypes.bool,
 };
 

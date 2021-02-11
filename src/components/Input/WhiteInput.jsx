@@ -7,6 +7,7 @@ export default function WhiteInput({
   placeholder,
   type,
   disabled,
+  errorMessage,
   onChange
 }) {
   return (
@@ -16,6 +17,8 @@ export default function WhiteInput({
       type={type}
       placeholder={placeholder}
       disabled={disabled}
+      onChange={onChange}
+      errorMessage={errorMessage}
     />
   )
 }
@@ -26,6 +29,10 @@ WhiteInput.defaultProps = {
 }
 
 WhiteInput.propTypes = {
-  type: PropTypes.oneOf(['text', 'number']),
-  onChange: PropTypes.func
+  type: PropTypes.oneOf(['text', 'number','password']),
+  disabled: PropTypes.bool,
+  onChange: PropTypes.func,
+  errorMessage: PropTypes.string,
+  placeholder: PropTypes.string,
+  label: PropTypes.string
 }

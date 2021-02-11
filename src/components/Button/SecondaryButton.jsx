@@ -12,12 +12,13 @@ export default function SecondaryButton({type, size, onClick, disabled, children
 
 SecondaryButton.defaultProps = {
   disabled : false,
-  type: 'button'
+  type: 'button',
 };
 
 SecondaryButton.propTypes = {
-  size : PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
+  type: PropTypes.oneOf(['button', 'submit']),
   onClick: PropTypes.func,
-  type : PropTypes.oneOf(['button', 'submit']),
+  disabled: PropTypes.bool,
 };
 

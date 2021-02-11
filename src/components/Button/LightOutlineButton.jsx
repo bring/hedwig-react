@@ -14,12 +14,13 @@ export default function LightOutlineButton({type, size, onClick, disabled, child
 
 LightOutlineButton.defaultProps = {
   disabled : false,
-  type: 'button'
-};
+  type: 'button',
+}
 
 LightOutlineButton.propTypes = {
-  size : PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
+  type: PropTypes.oneOf(['button', 'submit']),
   onClick: PropTypes.func,
-  type : PropTypes.oneOf(['button', 'submit']),
-};
+  disabled: PropTypes.bool,
+}
 
