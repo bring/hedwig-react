@@ -1,17 +1,15 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-export default function Block({px, py, mt, mb, children}) {
-    return (
-        <div className={`hw-block 
-            ${px ? (px == 'on' ? 'hw-block--px' : 'hw-block--px-' + px) : ''} 
-            ${py ? (py == 'on' ? 'hw-block--py' : 'hw-block--py-' + py) : ''}
-            ${mt ? (mt == 'on' ? 'hw-block--mt' : 'hw-block--mt-' + mt) : ''}
-            ${mb ? (mb == 'on' ? 'hw-block--mb' : 'hw-block--mb-' + mb) : ''}
-            `}>
-            {children}
-        </div>
-    )
+export default function Block({px, py, mt, mb, elementType, extraClasses, children}) {
+    const classes = `hw-block
+        ${ px ? (px == 'on' ? 'hw-block--px' : 'hw-block--px-' + px) : '' }
+        ${ py ? (py == 'on' ? 'hw-block--py' : 'hw-block--py-' + py) : '' }
+        ${ mt ? (mt == 'on' ? 'hw-block--mt' : 'hw-block--mt-' + mt) : '' }
+        ${ mb ? (mb == 'on' ? 'hw-block--mb' : 'hw-block--mb-' + mb) : '' }
+        ${ extraClasses }
+    `;
+    return React.createElement(elementType, { className: classes }, children);
 };
 
 const marginSizes = [
@@ -43,9 +41,17 @@ const marginSizes = [
     'large-5-responsive'
 ];
 
+
+Block.defaultProps = {
+    elementType : 'div',
+    extraClasses: ''
+};
+
 Block.propTypes = {
-    px : PropTypes.oneOf([ 'on', 'responsive', 'mobile' ]),
-    py : PropTypes.oneOf([ 'on', 'responsive' ]),
-    mt : PropTypes.oneOf([ 'on', ...marginSizes ]),
-    mb : PropTypes.oneOf([ 'on', ...marginSizes ])
+    px: PropTypes.oneOf([ 'on', 'responsive', 'mobile' ]),
+    py: PropTypes.oneOf([ 'on', 'responsive' ]),
+    mt: PropTypes.oneOf([ 'on', ...marginSizes ]),
+    mb: PropTypes.oneOf([ 'on', ...marginSizes ]),
+    elementType: PropTypes.oneOf(['article', 'div']),
+    extraClasses: PropTypes.string
 };
