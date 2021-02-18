@@ -2,18 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import BaseInput from './BaseInput'
 
-export default function Input({
+export default function PasswordInput({
   label,
   placeholder,
-  type,
+  variant,
   disabled,
   errorMessage,
   onChange
 }) {
   return (
     <BaseInput
+      variant={variant}
       label={label}
-      type={type}
+      type='password'
       placeholder={placeholder}
       disabled={disabled}
       onChange={onChange}
@@ -22,13 +23,12 @@ export default function Input({
   )
 }
 
-Input.defaultProps = {
+PasswordInput.defaultProps = {
   disabled: false,
   type: 'text'
 }
 
-Input.propTypes = {
-  type: PropTypes.oneOf(['text', 'number', 'password']),
+PasswordInput.propTypes = {
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
   errorMessage: PropTypes.string,

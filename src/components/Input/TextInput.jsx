@@ -2,20 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import BaseInput from './BaseInput'
 
-export default function WhiteInput({
+export default function TextInput({
   label,
   placeholder,
-  type,
   disabled,
+  maxLength,
   errorMessage,
   onChange
 }) {
   return (
     <BaseInput
-      variant='white'
       label={label}
-      type={type}
+      type='text'
       placeholder={placeholder}
+      maxLength={maxLength}
       disabled={disabled}
       onChange={onChange}
       errorMessage={errorMessage}
@@ -23,14 +23,14 @@ export default function WhiteInput({
   )
 }
 
-WhiteInput.defaultProps = {
-  disabled: false,
-  type: 'text'
+TextInput.defaultProps = {
+  disabled: false
 }
 
-WhiteInput.propTypes = {
-  type: PropTypes.oneOf(['text', 'number','password']),
+TextInput.propTypes = {
+  variant: PropTypes.oneOf(['', 'white']),
   disabled: PropTypes.bool,
+  maxLength: PropTypes.number,
   onChange: PropTypes.func,
   errorMessage: PropTypes.string,
   placeholder: PropTypes.string,
