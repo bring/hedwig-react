@@ -15,6 +15,7 @@ export default function Dropdown({
     <BaseDropdown
       variant={variant}
       label={label}
+      name={name}
       id={id}
       selected={selected}
       onChange={onChange}
