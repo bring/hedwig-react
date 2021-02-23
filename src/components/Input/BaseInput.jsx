@@ -5,7 +5,11 @@ export default function BaseInput({
   label,
   placeholder,
   type,
+  min,
+  max,
+  steps,
   disabled,
+  maxLength,
   variant,
   errorMessage,
   onChange
@@ -19,9 +23,13 @@ export default function BaseInput({
       {label}
       <input
         class={'hw-input ' + variation}
-        type='text'
+        type={type}
+        min={min}
+        max={max}
+        steps={steps}
         placeholder={placeholder}
         disabled={disabled}
+        maxlength={maxLength}
       />
       {errorMessage && (
         <div class='hw-error hw-error--align-left hw-error--indented'>
@@ -43,6 +51,7 @@ BaseInput.propTypes = {
   type: PropTypes.oneOf(['text', 'number', 'password']),
   onChange: PropTypes.func,
   variant: PropTypes.oneOf(['white', '']),
+  maxLength: PropTypes.number,
   errorMessage: PropTypes.string,
   placeholder: PropTypes.string,
   label: PropTypes.string

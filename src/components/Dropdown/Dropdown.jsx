@@ -13,7 +13,7 @@ export default function Dropdown({
 }) {
   return (
     <BaseDropdown
-      variant=''
+      variant={variant}
       label={label}
       id={id}
       selected={selected}
@@ -22,3 +22,7 @@ export default function Dropdown({
     />
   )
   ;}
+
+  Dropdown.propTypes = {
+    variant: PropTypes.oneOf(['', 'white'])
+  }
