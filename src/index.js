@@ -13,7 +13,6 @@ export { default as PrimaryOutlineButton } from './components/Button/PrimaryOutl
 export { default as SecondaryOutlineButton } from './components/Button/SecondaryOutlineButton.jsx'
 export { default as LightOutlineButton } from './components/Button/LightOutlineButton.jsx'
 export { default as Dropdown } from './components/Dropdown/Dropdown.jsx'
-export { default as WhiteDropdown } from './components/Dropdown/WhiteDropdown.jsx'
 
 export { default as Badge } from './components/Badge/Badge.jsx'
 export { default as DarkBadge } from './components/Badge/DarkBadge.jsx'
