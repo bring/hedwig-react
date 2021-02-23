@@ -51,6 +51,6 @@ Block.propTypes = {
     py: PropTypes.oneOf([ 'on', 'responsive' ]),
     mt: PropTypes.oneOf([ 'on', ...marginSizes ]),
     mb: PropTypes.oneOf([ 'on', ...marginSizes ]),
-    elementType: PropTypes.oneOf(['article', 'div']),
+    elementType: PropTypes.oneOf(['article', 'div', 'p']),
     classList: PropTypes.string
 };
