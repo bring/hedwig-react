@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-export default function Block({ px, py, mt, mb, elementType, extraClasses, children }) {
+export default function Block({ px, py, mt, mb, elementType, classList, children }) {
     return React.createElement(elementType, { className: `hw-block
         ${ px ? (px == 'on' ? 'hw-block--px' : 'hw-block--px-' + px) : '' }
         ${ py ? (py == 'on' ? 'hw-block--py' : 'hw-block--py-' + py) : '' }
         ${ mt ? (mt == 'on' ? 'hw-block--mt' : 'hw-block--mt-' + mt) : '' }
         ${ mb ? (mb == 'on' ? 'hw-block--mb' : 'hw-block--mb-' + mb) : '' }
-        ${ extraClasses }
+        ${ classList }
     ` }, children);
 };
 
@@ -43,7 +43,7 @@ const marginSizes = [
 
 Block.defaultProps = {
     elementType : 'div',
-    extraClasses: ''
+    classList: ''
 };
 
 Block.propTypes = {
@@ -52,5 +52,5 @@ Block.propTypes = {
     mt: PropTypes.oneOf([ 'on', ...marginSizes ]),
     mb: PropTypes.oneOf([ 'on', ...marginSizes ]),
     elementType: PropTypes.oneOf(['article', 'div']),
-    extraClasses: PropTypes.string
+    classList: PropTypes.string
 };
