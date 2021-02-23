@@ -39,5 +39,7 @@ NumberInput.propTypes = {
   onChange: PropTypes.func,
   errorMessage: PropTypes.string,
   placeholder: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  min: PropTypes.number,
+  max :PropTypes.number,
 }

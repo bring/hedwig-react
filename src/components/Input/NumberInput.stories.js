@@ -13,9 +13,7 @@ const Template = (args) => <div style={{width:'300px'}}><NumberInput {...args} /
 export const input = Template.bind({});
 input.args = {
   label:'Label',
-  placeholder: 'Please provide a number',
-  min:1,
-  max:50
+  placeholder: 'Please provide a number'
 };
 
 input.storyName="Number";
