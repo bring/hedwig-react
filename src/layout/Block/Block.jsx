@@ -2,13 +2,16 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 export default function Block({ px, py, mt, mb, elementType, classList, children }) {
-    return React.createElement(elementType, { className: `hw-block
-        ${ px ? (px == 'on' ? 'hw-block--px' : 'hw-block--px-' + px) : '' }
-        ${ py ? (py == 'on' ? 'hw-block--py' : 'hw-block--py-' + py) : '' }
-        ${ mt ? (mt == 'on' ? 'hw-block--mt' : 'hw-block--mt-' + mt) : '' }
-        ${ mb ? (mb == 'on' ? 'hw-block--mb' : 'hw-block--mb-' + mb) : '' }
-        ${ classList }
-    ` }, children);
+    const classes = ['hw-block'];
+    if (px) classes.push(px == 'on' ? 'hw-block--px' : 'hw-block--px-' + px);
+    if (py) classes.push(py == 'on' ? 'hw-block--py' : 'hw-block--py-' + py);
+    if (mt) classes.push(mt == 'on' ? 'hw-block--mt' : 'hw-block--mt-' + mt);
+    if (mb) classes.push(mb == 'on' ? 'hw-block--mb' : 'hw-block--mb-' + mb);
+    if (classList) classes.push(classList);
+
+    return React.createElement(elementType, {
+        className: classes.join(' ')
+    }, children);
 };
 
 const marginSizes = [
