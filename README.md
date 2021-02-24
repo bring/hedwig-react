@@ -13,16 +13,9 @@ npm install --save hedwig-react
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import { Badge } from '@posten/hedwig-react'
 
-import MyComponent from 'hedwig-react'
-import 'hedwig-react/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+<Badge>Hello world</Badge>
 ```
 
 ## License
