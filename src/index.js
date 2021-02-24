@@ -1,9 +1,6 @@
 import React from 'react'
 import styles from './styles.module.css'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
 
 
 //Buttons
@@ -18,6 +15,10 @@ export { default as Badge } from './components/Badge/Badge.jsx'
 export { default as DarkBadge } from './components/Badge/DarkBadge.jsx'
 export { default as WarningBadge } from './components/Badge/WarningBadge.jsx'
 export { default as WhiteBadge } from './components/Badge/WhiteBadge.jsx'
+
+export { default as TextInput } from './components/Input/TextInput.jsx'
+export { default as NumberInput } from './components/Input/NumberInput.jsx'
+export { default as PasswordInput } from './components/Input/PasswordInput.jsx'
 
 export { default as Block } from './layout/Block/Block.jsx'
 
