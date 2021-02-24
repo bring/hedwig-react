@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save hedwig-react
+npm install @posten/hedwig-react
 ```
 
 ## Usage
