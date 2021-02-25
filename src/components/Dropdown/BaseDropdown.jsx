@@ -10,7 +10,8 @@ export default function BaseDropdown({
   onChange,
   options
 }) {
-  const variantClass = variant != '' ? 'hw-dropdown--' + variant : ''
+  const variantClass = variant == 'white' ? 'hw-dropdown--white' : ''
+  const labelClass = variant == 'line' ? 'hw-label--line' : ''
   var items = ''
   if (options) {
     items = options.map((item, index) => (
@@ -22,7 +23,7 @@ export default function BaseDropdown({
   }
 
   return (
-    <label className='hw-label'>
+    <label className={`hw-label ${labelClass}`} >
       {label}
       <select
         name={name}
@@ -44,5 +45,5 @@ BaseDropdown.defaultProps = {
 }
 
 BaseDropdown.propTypes = {
-  variant: PropTypes.oneOf(['', 'white'])
+  variant: PropTypes.oneOf(['', 'white', 'line'])
 }
