@@ -7,6 +7,7 @@ export default function BaseButton({
   size,
   onClick,
   disabled,
+  ariaControl,
   children
 }) {
   const buttonVariant = variant != '' ? 'hw-button--' + variant : ''
@@ -18,6 +19,7 @@ export default function BaseButton({
       className={`hw-button ${buttonVariant} ${buttonSize}`}
       onClick={onClick}
       disabled={disabled}
+      aria-control={ariaControl}
     >
       {children}
     </button>
@@ -43,4 +45,5 @@ BaseButton.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
+  ariaControl: PropTypes.string,
 }

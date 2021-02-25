@@ -7,6 +7,7 @@ export default function PrimaryButton({
   size,
   onClick,
   disabled,
+  ariaControl,
   children
 }) {
   return (
@@ -15,6 +16,7 @@ export default function PrimaryButton({
       type={type}
       size={size}
       disabled={disabled}
+      ariaControl={ariaControl}
       onClick={onClick}
     >
       {children}
@@ -32,4 +34,5 @@ PrimaryButton.propTypes = {
   type: PropTypes.oneOf(['button', 'submit']),
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
+  ariaControl: PropTypes.string,
 }
