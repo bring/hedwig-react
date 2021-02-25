@@ -20,10 +20,10 @@ export default function BaseInput({
   labelVariation = labelVariation + (variant == 'line' ? 'hw-label--line' : '' )
 
   return (
-    <label class={'hw-label ' + labelVariation}>
+    <label className={'hw-label ' + labelVariation}>
       {label}
       <input
-        class={'hw-input ' + variation}
+        className={'hw-input ' + variation}
         type={type}
         min={min}
         max={max}
