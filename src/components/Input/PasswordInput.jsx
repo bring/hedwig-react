@@ -29,6 +29,7 @@ PasswordInput.defaultProps = {
 }
 
 PasswordInput.propTypes = {
+  variant: PropTypes.oneOf(['', 'white', 'line']),
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
   errorMessage: PropTypes.string,

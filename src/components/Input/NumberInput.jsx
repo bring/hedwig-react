@@ -34,7 +34,7 @@ NumberInput.defaultProps = {
 }
 
 NumberInput.propTypes = {
-  variant: PropTypes.oneOf(['', 'white']),
+  variant: PropTypes.oneOf(['', 'white', 'line']),
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
   errorMessage: PropTypes.string,

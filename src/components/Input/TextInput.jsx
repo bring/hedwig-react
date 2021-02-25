@@ -8,12 +8,14 @@ export default function TextInput({
   disabled,
   maxLength,
   errorMessage,
+  variant,
   onChange
 }) {
   return (
     <BaseInput
       label={label}
       type='text'
+      variant={variant}
       placeholder={placeholder}
       maxLength={maxLength}
       disabled={disabled}
@@ -28,7 +30,7 @@ TextInput.defaultProps = {
 }
 
 TextInput.propTypes = {
-  variant: PropTypes.oneOf(['', 'white']),
+  variant: PropTypes.oneOf(['', 'white', 'line']),
   disabled: PropTypes.bool,
   maxLength: PropTypes.number,
   onChange: PropTypes.func,

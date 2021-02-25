@@ -16,7 +16,8 @@ export default function BaseInput({
 }) {
   var variation = variant != '' ? 'hw-input--' + variant : ''
   variation = variation + (errorMessage != '' ? ' hw-input--error' : '')
-  const labelVariation = errorMessage != '' ? 'hw-label--error' : ''
+  var labelVariation = errorMessage != '' ? 'hw-label--error' : ''
+  labelVariation = labelVariation + (variant == 'line' ? 'hw-label--line' : '' )
 
   return (
     <label class={'hw-label ' + labelVariation}>
@@ -30,6 +31,7 @@ export default function BaseInput({
         placeholder={placeholder}
         disabled={disabled}
         maxlength={maxLength}
+        onChange={onChange}
       />
       {errorMessage && (
         <div class='hw-error hw-error--align-left hw-error--indented'>
@@ -50,7 +52,7 @@ BaseInput.defaultProps = {
 BaseInput.propTypes = {
   type: PropTypes.oneOf(['text', 'number', 'password']),
   onChange: PropTypes.func,
-  variant: PropTypes.oneOf(['white', '']),
+  variant: PropTypes.oneOf(['white', 'line', '']),
   maxLength: PropTypes.number,
   errorMessage: PropTypes.string,
   placeholder: PropTypes.string,
