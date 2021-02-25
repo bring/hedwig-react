@@ -21,5 +21,6 @@ export { default as NumberInput } from './components/Input/NumberInput.jsx'
 export { default as PasswordInput } from './components/Input/PasswordInput.jsx'
 
 export { default as Block } from './layout/Block/Block.jsx'
+export { default as Flex } from './layout/Flex/Flex.jsx'
 
 export { default as Card } from './components/Card/Card.jsx'
