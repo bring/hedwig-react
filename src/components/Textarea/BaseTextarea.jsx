@@ -9,6 +9,7 @@ export default function BaseTextarea({
   placeholder,
   rows,
   cols,
+  maxLength,
   onChange,
   disabled,
   readonly,
@@ -26,6 +27,7 @@ export default function BaseTextarea({
         className={'hw-textarea ' + variation}
         rows={rows}
         cols={cols}
+        maxlength={maxLength}
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
@@ -48,6 +50,7 @@ BaseTextarea.PropTypes = {
   placeholder: PropTypes.string,
   rows: PropTypes.number,
   cols: PropTypes.number,
+  maxLength: PropTypes.number,
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
   readonly: PropTypes.bool

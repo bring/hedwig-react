@@ -10,6 +10,7 @@ export default function Textarea({
   placeholder,
   rows,
   cols,
+  maxLength,
   onChange,
   disabled,
   readonly,
@@ -24,6 +25,7 @@ export default function Textarea({
       placeholder={placeholder}
       rows={rows}
       cols={cols}
+      maxLength={maxLength}
       onChange={onChange}
       disabled={disabled}
       readonly={readonly}
@@ -40,6 +42,7 @@ Textarea.propTypes = {
   placeholder: PropTypes.string,
   rows: PropTypes.number,
   cols: PropTypes.number,
+  maxLength: PropTypes.number,
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
   readonly: PropTypes.bool
