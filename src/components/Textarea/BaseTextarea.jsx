@@ -13,10 +13,18 @@ export default function BaseTextarea({
   onChange,
   disabled,
   readonly,
+  errorMessage,
   children
 }) {
-  const labelVariant = variant == 'line' ? 'hw-label--line' : ''
-  const variation = variant != '' ? 'hw-textarea--' + variant : ''
+  let labelVariant = variant == 'line' ? 'hw-label--line' : ''
+  let variation = variant != '' ? 'hw-textarea--' + variant : ''
+  if (errorMessage != '') {
+      labelVariant += ' hw-label--error'
+      variation += ' hw-textarea--error'
+  }
+   
+  
+ 
 
   return (
     <label className={'hw-label ' + labelVariant} >
@@ -35,12 +43,18 @@ export default function BaseTextarea({
       >
         {children}
       </textarea>
+      {errorMessage && (
+        <div class='hw-error hw-error--align-left'>
+          {errorMessage}
+        </div>
+      )}
     </label>
   )
 }
 
 BaseTextarea.defaultProps = {
-    variant : ''
+    variant : '',
+    errorMessage : ''
 }
 
 BaseTextarea.PropTypes = {
@@ -53,5 +67,6 @@ BaseTextarea.PropTypes = {
   maxLength: PropTypes.number,
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
-  readonly: PropTypes.bool
+  readonly: PropTypes.bool,
+  errorMessage: PropTypes.string
 }
