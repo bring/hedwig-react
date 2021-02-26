@@ -14,10 +14,12 @@ export default function BaseInput({
   errorMessage,
   onChange
 }) {
-  var variation = variant != '' ? 'hw-input--' + variant : ''
-  variation = variation + (errorMessage != '' ? ' hw-input--error' : '')
-  var labelVariation = errorMessage != '' ? 'hw-label--error' : ''
-  labelVariation = labelVariation + (variant == 'line' ? 'hw-label--line' : '' )
+  let variation = variant != '' ? 'hw-input--' + variant : ''
+  let labelVariation = (variant == 'line' ? 'hw-label--line' : '' )
+  if (errorMessage != ''){
+    variation +=  ' hw-input--error'
+    labelVariation += ' hw-label--error'
+  } 
 
   return (
     <label class={'hw-label ' + labelVariation}>
