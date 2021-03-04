@@ -12,7 +12,8 @@ export default function BaseInput({
   maxLength,
   variant,
   errorMessage,
-  onChange
+  onChange,
+  readOnly
 }) {
   let variation = variant != '' ? 'hw-input--' + variant : ''
   let labelVariation = (variant == 'line' ? 'hw-label--line' : '' )
@@ -34,6 +35,8 @@ export default function BaseInput({
         disabled={disabled}
         maxlength={maxLength}
         onChange={onChange}
+        readOnly={readOnly}
+
       />
       {errorMessage && (
         <div class='hw-error hw-error--align-left hw-error--indented'>
@@ -58,5 +61,7 @@ BaseInput.propTypes = {
   maxLength: PropTypes.number,
   errorMessage: PropTypes.string,
   placeholder: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  disabled: PropTypes.bool,
+  readOnly: PropTypes.bool
 }

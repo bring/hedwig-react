@@ -11,7 +11,8 @@ export default function NumberInput({
   variant,
   disabled,
   errorMessage,
-  onChange
+  onChange,
+  readOnly
 }) {
   return (
     <BaseInput
@@ -25,6 +26,7 @@ export default function NumberInput({
       disabled={disabled}
       onChange={onChange}
       errorMessage={errorMessage}
+      readOnly={readOnly}
     />
   )
 }
@@ -36,6 +38,7 @@ NumberInput.defaultProps = {
 NumberInput.propTypes = {
   variant: PropTypes.oneOf(['', 'white', 'line']),
   disabled: PropTypes.bool,
+  readOnly: PropTypes.bool,
   onChange: PropTypes.func,
   errorMessage: PropTypes.string,
   placeholder: PropTypes.string,
