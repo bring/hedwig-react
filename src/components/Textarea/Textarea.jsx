@@ -13,7 +13,7 @@ export default function Textarea({
   maxLength,
   onChange,
   disabled,
-  readonly,
+  readOnly,
   errorMessage,
   children
 }) {
@@ -29,7 +29,7 @@ export default function Textarea({
       maxLength={maxLength}
       onChange={onChange}
       disabled={disabled}
-      readonly={readonly}
+      readOnly={readOnly}
       errorMessage={errorMessage}
     >
       {children}
@@ -47,6 +47,6 @@ Textarea.propTypes = {
   maxLength: PropTypes.number,
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
-  readonly: PropTypes.bool,
+  readOnly: PropTypes.bool,
   errorMessage: PropTypes.string
 }
