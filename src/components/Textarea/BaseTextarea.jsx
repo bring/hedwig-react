@@ -12,7 +12,7 @@ export default function BaseTextarea({
   maxLength,
   onChange,
   disabled,
-  readonly,
+  readOnly,
   errorMessage,
   children
 }) {
@@ -39,7 +39,7 @@ export default function BaseTextarea({
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
-        readonly={readonly}
+        readOnly={readOnly}
       >
         {children}
       </textarea>
@@ -67,6 +67,6 @@ BaseTextarea.PropTypes = {
   maxLength: PropTypes.number,
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
-  readonly: PropTypes.bool,
+  readOnly: PropTypes.bool,
   errorMessage: PropTypes.string
 }
