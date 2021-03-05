@@ -20,6 +20,12 @@ export { default as TextInput } from './components/Input/TextInput.jsx'
 export { default as NumberInput } from './components/Input/NumberInput.jsx'
 export { default as PasswordInput } from './components/Input/PasswordInput.jsx'
 
+export { default as Message } from './components/Message/Message.jsx'
+export { default as ErrorMessage } from './components/Message/ErrorMessage.jsx'
+export { default as SubtleMessage } from './components/Message/SubtleMessage.jsx'
+export { default as SubtleErrorMessage } from './components/Message/SubtleErrorMessage.jsx'
+export { default as SubtleLightMessage } from './components/Message/SubtleLightMessage.jsx'
+
 export { default as Block } from './layout/Block/Block.jsx'
 export { default as Flex } from './layout/Flex/Flex.jsx'
 
