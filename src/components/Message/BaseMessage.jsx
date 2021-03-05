@@ -17,9 +17,10 @@ export default function BaseMessage({title, faIcon, iconSize, variant, children}
 BaseMessage.propTypes = {
     title: PropTypes.string,
     faIcon: PropTypes.object,
-    variant: PropTypes.oneOf(['error', 'subtle'])
+    variant: PropTypes.oneOf(['error', 'subtle', 'subtle-light', 'subtle-error', ''])
 };
 
 BaseMessage.defaultProps = {
-    iconSize: '1x'
+    iconSize: '1x',
+    variant: ''
 }
