@@ -2,7 +2,7 @@ import React from 'react';
 import SubtleErrorMessage from './SubtleErrorMessage';
 
 export default {
-  title: 'Components/Message/Subtle/Error',
+  title: 'Components/Message/Subtle Error',
   component: SubtleErrorMessage,
 };
 
@@ -13,4 +13,4 @@ const Template = (args) =>
     </SubtleErrorMessage>;
 
 
-export const Error = Template.bind({});
+export const SubtleError = Template.bind({});

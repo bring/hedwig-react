@@ -13,4 +13,4 @@ const Template = (args) =>
     </SubtleMessage>;
 
 
-export const Default = Template.bind({});
+export const Subtle = Template.bind({});

@@ -2,7 +2,7 @@ import React from 'react';
 import SubtleLightMessage from './SubtleLightMessage';
 
 export default {
-  title: 'Components/Message/Subtle/Light',
+  title: 'Components/Message/Subtle Light',
   component: SubtleLightMessage,
   parameters: {
     backgrounds: {
@@ -23,4 +23,4 @@ const Template = (args) =>
     </SubtleLightMessage>;
 
 
-export const Light = Template.bind({});
+export const SubtleLight = Template.bind({});
