@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoSquare } from '@fortawesome/pro-solid-svg-icons';
 
-export default function InfoSubtle({icon, children}) {
+export default function InfoSubtle({icon, light, children}) {
     return (
-        <div className="hw-info-subtle">
+        <div className={`hw-info-subtle ${light ? 'hw-info-subtle--light' : ''}`}>
             { icon && <FontAwesomeIcon icon={faInfoSquare} className="hw-info-subtle__icon" /> }
             {children}
         </div>
@@ -13,9 +13,11 @@ export default function InfoSubtle({icon, children}) {
 };
   
 InfoSubtle.propTypes = {
-    icon: PropTypes.bool
+    icon: PropTypes.bool,
+    light: PropTypes.bool
 };
 
 InfoSubtle.defaultProps = {
-    icon: true
+    icon: true,
+    light: false
 }
