@@ -26,6 +26,10 @@ export { default as SubtleMessage } from './components/Message/SubtleMessage.jsx
 export { default as SubtleErrorMessage } from './components/Message/SubtleErrorMessage.jsx'
 export { default as SubtleLightMessage } from './components/Message/SubtleLightMessage.jsx'
 
+export { default as Link } from './components/Link/Link.jsx'
+export { default as InvertedLink } from './components/Link/InvertedLink.jsx'
+export { default as SolidLink } from './components/Link/SolidLink.jsx'
+
 export { default as Block } from './layout/Block/Block.jsx'
 export { default as Flex } from './layout/Flex/Flex.jsx'
 
