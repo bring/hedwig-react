@@ -20,7 +20,7 @@ BaseLink.defaultProps = {
 }
 
 BaseLink.propTypes = {
-  href: PropTypes.string,
+  href: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['small', 'big', '']),
   type: PropTypes.string
 }
