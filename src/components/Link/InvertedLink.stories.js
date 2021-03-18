@@ -19,8 +19,7 @@ const Template = (args) => <InvertedLink {...args}>This is an inverted link</Inv
 
 export const input = Template.bind({});
 input.args = {
-  
+  href: '#'
 };
 
 input.storyName="InvertedLink";
-
