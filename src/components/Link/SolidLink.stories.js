@@ -13,4 +13,4 @@ input.args = {
   href: '#'
 };
 
-input.storyName="SolidLink";
+input.storyName="Solid";
