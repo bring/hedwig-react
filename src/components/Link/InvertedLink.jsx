@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import BaseLink from './BaseLink'
 
-export default function InvertedLink({size, children}) {
+export default function InvertedLink({href, size, children}) {
     return(
-        <BaseLink type="inverted" size={size}>{children}</BaseLink>
+        <BaseLink href={href} type="inverted" size={size}>{children}</BaseLink>
     );
 };
 
@@ -13,5 +13,6 @@ InvertedLink.defaultProps = {
 }
 
 InvertedLink.propTypes = {
+    href: PropTypes.string,
     size : PropTypes.oneOf(['small', 'big', '']),
 }
