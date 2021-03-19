@@ -5,7 +5,6 @@ import Item from './Item';
 
 export default function Accordion({ items }) {
 
-    const []
     return (
         <ul className="hw-accordion">
             { items.map(item => <Item item={ item } key={ item.title } />) }
