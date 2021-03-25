@@ -2,7 +2,7 @@ import React from 'react';
 import InvertedLink from './InvertedLink';
 
 export default {
-  title: 'Components/Link/InvertedLink',
+  title: 'Components/Link/Inverted',
   component: InvertedLink,
   parameters: {
     backgrounds: {
@@ -22,4 +22,4 @@ input.args = {
   href: '#'
 };
 
-input.storyName="InvertedLink";
+input.storyName="Inverted";

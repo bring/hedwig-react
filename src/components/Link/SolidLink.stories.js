@@ -2,7 +2,7 @@ import React from 'react';
 import SolidLink from './SolidLink';
 
 export default {
-  title: 'Components/Link/SolidLink',
+  title: 'Components/Link/Solid',
   component: SolidLink,
 };
 
@@ -13,4 +13,4 @@ input.args = {
   href: '#'
 };
 
-input.storyName="SolidLink";
+input.storyName="Solid";
