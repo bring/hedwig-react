@@ -6,6 +6,7 @@ export default function PrimaryButton({
   type,
   size,
   onClick,
+  href,
   disabled,
   ariaControl,
   children
@@ -18,6 +19,7 @@ export default function PrimaryButton({
       disabled={disabled}
       ariaControl={ariaControl}
       onClick={onClick}
+      href={href}
     >
       {children}
     </BaseButton>
@@ -35,4 +37,5 @@ PrimaryButton.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   ariaControl: PropTypes.string,
+  href:PropTypes.string
 }
