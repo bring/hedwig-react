@@ -6,6 +6,7 @@ export default function BaseButton({
   type,
   size,
   onClick,
+  href,
   disabled,
   ariaControl,
   children
@@ -13,23 +14,36 @@ export default function BaseButton({
   const buttonVariant = variant != '' ? 'hw-button--' + variant : ''
   const buttonSize = size ? 'hw-button--' + size : ''
 
-  return (
-    <button
-      type={type}
-      className={`hw-button ${buttonVariant} ${buttonSize}`}
-      onClick={onClick}
-      disabled={disabled}
-      aria-control={ariaControl}
-    >
-      {children}
-    </button>
-  )
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={`hw-button ${buttonVariant} ${buttonSize}`}
+        onClick={onClick}
+        disabled={disabled}
+      >
+        {children}
+      </a>
+    )
+  } else {
+    return (
+      <button
+        type={type}
+        className={`hw-button ${buttonVariant} ${buttonSize}`}
+        onClick={onClick}
+        disabled={disabled}
+        aria-control={ariaControl}
+      >
+        {children}
+      </button>
+    )
+  }
 }
 
 BaseButton.defaultProps = {
   variant: '',
   type: 'button',
-  disabled: false,
+  disabled: false
 }
 
 BaseButton.propTypes = {
@@ -46,4 +60,5 @@ BaseButton.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   ariaControl: PropTypes.string,
+  href: PropTypes.string
 }

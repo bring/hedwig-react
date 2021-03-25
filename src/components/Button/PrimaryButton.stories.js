@@ -11,7 +11,7 @@ const Template = (args) => <PrimaryButton {...args} >Primary Button</PrimaryButt
 export const PButton = Template.bind({});
 PButton.args = {
   disabled : false,
-  onClick: ()=> alert('test')
+  onClick: ()=> alert('This is an onclick test')
 };
 
 PButton.storyName="Primary";
