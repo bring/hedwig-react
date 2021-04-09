@@ -1,13 +1,23 @@
-import React, { useState } from "react";
-import Item from './Item';
-//import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from 'prop-types';
+import { ExpandedProvider } from "./ExpandedContext";
 
 
-export default function Accordion({ items }) {
+export default function Accordion({ children, allowMultiple }) {
 
     return (
         <ul className="hw-accordion">
-            { items.map(item => <Item item={ item } key={ item.title } />) }
+            <ExpandedProvider allowMultiple={ allowMultiple }>
+                { children }
+            </ExpandedProvider>
         </ul>
     )
+}
+
+Accordion.propTypes = {
+    allowMultiple: PropTypes.bool
+}
+
+Accordion.defaultProps = {
+    allowMultiple: true
 }
