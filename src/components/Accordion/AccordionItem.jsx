@@ -2,20 +2,20 @@ import React, { createRef, useContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import { ExpandedContext } from "./ExpandedContext";
 
-export default function AccordionItem({ title, children, initialExpanded }) {
+export default function AccordionItem({ title, children, expanded }) {
     // State coming from the surrounding Accordion
     const [expandedState, setExpandedState] = useContext(ExpandedContext);
 
     // Local states
     const [triggerHeight, setTriggerHeight] = useState();
     const [contentHeight, setContentHeight] = useState();
-    const [expanded, setExpanded] = useState(initialExpanded);
+    const [isExpanded, setIsExpanded] = useState(expanded);
 
     const trigger = createRef();
     const contentRef = createRef();
     
     useEffect(() => {
-        if(initialExpanded && !expandedState.allowMultiple && !expandedState.hasSetInitialExpanded){
+        if(expanded && !expandedState.allowMultiple && !expandedState.hasSetInitialExpanded){
             setExpandedState(expandedState => ({ ...expandedState, open: title, hasSetInitialExpanded: true }));
         }
         setTriggerHeight(trigger.current.offsetHeight);
@@ -24,19 +24,19 @@ export default function AccordionItem({ title, children, initialExpanded }) {
 
     function toggleItem() {
         if(expandedState.allowMultiple){
-            setExpanded(!expanded);
+            setIsExpanded(!isExpanded);
         } else {
             setExpandedState(expandedState => ({ ...expandedState, open: expandedState.open == title ? null : title }));
         }
     }
     /**
-     * if allowMultiple, each AccordionItem keeps track of their own expanded status
+     * if allowMultiple, each AccordionItem keeps track of their own expanded status in isExpanded
      * otherwise expandedState keeps track of which item is expanded
      */
-    const isExpanded = expandedState.allowMultiple ? expanded : expandedState.open == title;
+    const showExpanded = expandedState.allowMultiple ? isExpanded : expandedState.open == title;
 
     return (
-        <li className="hw-accordion__item" style={ { height: isExpanded ? (triggerHeight + contentHeight) + 'px' : triggerHeight + 'px' } } >
+        <li className="hw-accordion__item" style={ { height: showExpanded ? (triggerHeight + contentHeight) + 'px' : triggerHeight + 'px' } } >
             <button className="hw-accordion__trigger" onClick={ toggleItem } ref={ trigger } >
                 { title }
                 <div className="hw-accordion__icon"></div>
@@ -50,9 +50,9 @@ export default function AccordionItem({ title, children, initialExpanded }) {
 
 
 AccordionItem.propTypes = {
-    initialExpanded: PropTypes.bool
+    expanded: PropTypes.bool
 };
 
 AccordionItem.defaultProps = {
-    initialExpanded: false
+    expanded: false
 }
