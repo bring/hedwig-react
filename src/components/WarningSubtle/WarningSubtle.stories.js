@@ -2,7 +2,7 @@ import React from 'react';
 import WarningSubtle from './WarningSubtle';
 
 export default {
-  title: 'Components/Warning Subtle',
+    title: 'Components/Warning/WarningSubtle',
   component: WarningSubtle,
 };
 

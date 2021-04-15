@@ -2,7 +2,7 @@ import React from 'react';
 import WarningBox from './WarningBox';
 
 export default {
-  title: 'Components/Warning Box',
+  title: 'Components/Warning/WarningBox',
   component: WarningBox,
 };
 
