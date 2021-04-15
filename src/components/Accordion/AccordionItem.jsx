@@ -50,7 +50,8 @@ export default function AccordionItem({ title, children, expanded }) {
 
 
 AccordionItem.propTypes = {
-    expanded: PropTypes.bool
+    expanded: PropTypes.bool,
+    title: PropTypes.string.isRequired
 };
 
 AccordionItem.defaultProps = {
