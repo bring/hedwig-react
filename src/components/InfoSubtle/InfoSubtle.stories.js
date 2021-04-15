@@ -2,7 +2,7 @@ import React from 'react';
 import InfoSubtle from './InfoSubtle';
 
 export default {
-    title: 'Components/Info/Subtle',
+    title: 'Components/Info/InfoSubtle',
     component: InfoSubtle,
 };
 

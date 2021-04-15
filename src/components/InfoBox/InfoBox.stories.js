@@ -2,7 +2,7 @@ import React from 'react';
 import InfoBox from './InfoBox';
 
 export default {
-  title: 'Components/Info/Box',
+  title: 'Components/Info/InfoBox',
   component: InfoBox,
 };
 
