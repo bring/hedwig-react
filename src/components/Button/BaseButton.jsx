@@ -49,6 +49,8 @@ BaseButton.defaultProps = {
 BaseButton.propTypes = {
   variant: PropTypes.oneOf([
     '',
+    'chat',
+    'chat-fixed',
     'primary',
     'secondary',
     'outline-primary',
