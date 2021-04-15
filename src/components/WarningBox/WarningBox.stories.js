@@ -1,17 +1,18 @@
 import React from 'react';
 import WarningBox from './WarningBox';
+import SolidLink from '../Link/SolidLink';
 
 export default {
   title: 'Components/Warning/WarningBox',
   component: WarningBox,
 };
 
-const Template = (args) => 
-    <WarningBox {...args} >
+const Template = (args) => (
+    <WarningBox {...args}>
         <p>The body text is here. Should not be very long</p>
-        <a className="hw-link hw-link--solid" href="#">Click me</a>
-    </WarningBox>;
-
+        <SolidLink href='#'>Click me</SolidLink>
+    </WarningBox>
+)
 
 export const Default = Template.bind({});
 Default.args = {

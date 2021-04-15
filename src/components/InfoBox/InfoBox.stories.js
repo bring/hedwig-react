@@ -1,5 +1,6 @@
 import React from 'react';
 import InfoBox from './InfoBox';
+import Link from '../Link/Link';
 
 export default {
   title: 'Components/Info/InfoBox',
@@ -9,7 +10,7 @@ export default {
 const Template = (args) => 
     <InfoBox {...args} >
         <p>The body text is here. Should not be very long</p>
-        <a className="hw-link" href="#">Click me</a>
+        <Link href='#'>Click me</Link>
     </InfoBox>;
 
 

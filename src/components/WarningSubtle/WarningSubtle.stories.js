@@ -1,5 +1,6 @@
 import React from 'react';
 import WarningSubtle from './WarningSubtle';
+import SolidLink from '../Link/SolidLink';
 
 export default {
     title: 'Components/Warning/WarningSubtle',
@@ -9,7 +10,7 @@ export default {
 const Template = (args) => 
     <WarningSubtle { ...args } >
         The text is here. Inline elements only.&nbsp;
-        <a className="hw-link hw-link--solid" href="#">Click me</a>
+        <SolidLink href="#">Click me</SolidLink>
     </WarningSubtle>;
 
 

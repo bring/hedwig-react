@@ -1,5 +1,7 @@
 import React from 'react';
 import InfoSubtle from './InfoSubtle';
+import Link from '../Link/Link';
+import InvertedLink from '../Link/InvertedLink';
 
 export default {
     title: 'Components/Info/InfoSubtle',
@@ -9,13 +11,13 @@ export default {
 export const Default = (args) => 
     <InfoSubtle {...args} >
         The text is here. Inline elements only.&nbsp;
-        <a className="hw-link" href="#">Click me</a>
+        <Link href="#">Click me</Link>
     </InfoSubtle>;
 
 export const Light = (args) => 
     <InfoSubtle {...args} >
         The text is here. Inline elements only.&nbsp;
-        <a className="hw-link hw-link--inverted" href="#">Click me</a>
+        <InvertedLink href="#">Click me</InvertedLink>
     </InfoSubtle>;
 
 
