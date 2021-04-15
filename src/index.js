@@ -35,3 +35,6 @@ export { default as Block } from './layout/Block/Block.jsx'
 export { default as Flex } from './layout/Flex/Flex.jsx'
 
 export { default as Card } from './components/Card/Card.jsx'
+
+export { default as Accordion } from './components/Accordion/Accordion.jsx'
+export { default as AccordionItem } from './components/Accordion/AccordionItem.jsx'
