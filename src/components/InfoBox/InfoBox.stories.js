@@ -1,19 +1,19 @@
 import React from 'react';
-import Message from './Message';
+import InfoBox from './InfoBox';
 
 export default {
-  title: 'Components/Message',
-  component: Message,
+  title: 'Components/Info/InfoBox',
+  component: InfoBox,
 };
 
 const Template = (args) => 
-    <Message {...args} >
+    <InfoBox {...args} >
         <p>The body text is here. Should not be very long</p>
         <a className="hw-link" href="#">Click me</a>
-    </Message>;
+    </InfoBox>;
 
 
 export const Default = Template.bind({});
 Default.args = {
-  title: 'So, a message'
+  title: 'So, an Info Box'
 };
