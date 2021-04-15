@@ -2,8 +2,8 @@ import React from 'react';
 import InfoSubtle from './InfoSubtle';
 
 export default {
-  title: 'Components/Info Subtle',
-  component: InfoSubtle,
+    title: 'Components/Info/Subtle',
+    component: InfoSubtle,
 };
 
 export const Default = (args) => 
