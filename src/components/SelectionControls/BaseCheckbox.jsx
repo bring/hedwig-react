@@ -5,13 +5,12 @@ export default function BaseCheckbox({
   label,
   value,
   checked,
-  disabled, 
+  disabled,
   variants,
-  errorMessage
+  errorMessage,
+  required,
+  onClick
 }) {
-
-    
-
   let classes = ''
   if (variants) {
     variants.forEach((element) => {
@@ -26,7 +25,14 @@ export default function BaseCheckbox({
   return (
     <label class={'hw-checkbox' + classes}>
       {label}
-      <input type='checkbox' value={value} defaultChecked={checked} disabled={disabled} />
+      <input
+        type='checkbox'
+        value={value}
+        defaultChecked={checked}
+        disabled={disabled}
+        required={required}
+        onClick={onClick}
+      />
       <i class='hw-checkbox__indicator'></i>
       {errorMessage && (
         <div class='hw-error-simple hw-error--align-left'>{errorMessage}</div>
@@ -38,7 +44,7 @@ export default function BaseCheckbox({
 BaseCheckbox.defaultProps = {
   errorMessage: '',
   checked: false,
-  disabled: false,
+  disabled: false
 }
 
 BaseCheckbox.propTypes = {
@@ -49,5 +55,7 @@ BaseCheckbox.propTypes = {
   variants: PropTypes.arrayOf(
     PropTypes.oneOf(['bounding', 'full', 'horisontal'])
   ),
-  errorMessage: PropTypes.string
+  errorMessage: PropTypes.string,
+  required: PropTypes.bool,
+  onClick: PropTypes.func
 }

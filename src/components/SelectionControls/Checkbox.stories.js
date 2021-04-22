@@ -13,7 +13,6 @@ export const cbox = Template.bind({});
 cbox.args = {
   label : "label",
   value: "value",
-  onClick: ()=> alert('This is an onclick test')
 };
 
 cbox.storyName="Default";

@@ -10,6 +10,7 @@ export default function Checkbox({
   disabled,
   errorMessage,
   required,
+  onClick
 }) {
   const variants = useContext(FieldsetContext)
   let classes = []
@@ -29,6 +30,7 @@ export default function Checkbox({
       variants={classes}
       errorMessage={errorMessage}
       required={required}
+      onClick={onClick}
     />
   )
 }
