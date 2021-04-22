@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import FieldsetContext, { FieldsetProvider } from '../Fieldset/FieldsetContext'
 import BaseCheckbox from './BaseCheckbox';
 
-export default function BoundingCheckbox({ label, value, checked, disabled, errorMessage }) {
+export default function BoundingCheckbox({ label, value, checked, disabled, errorMessage, required }) {
 
   const variants = useContext(FieldsetContext)
-  let classes = [];
+  let classes = ['bounding'];
   if (variants) {
      var selectionControls = variants.find((x) => x.name ==="selectionControls")  
      selectionControls.value.forEach(element => {
@@ -17,7 +17,7 @@ export default function BoundingCheckbox({ label, value, checked, disabled, erro
   classes.push("bounding")
 
   return (
-    <BaseCheckbox label={label} value={value} checked={checked} disabled={disabled} variants={classes} errorMessage={errorMessage}/>
+    <BaseCheckbox label={label} value={value} checked={checked} disabled={disabled} variants={classes} errorMessage={errorMessage} required={required}/>
   )
 }
 
@@ -26,5 +26,6 @@ BoundingCheckbox.propTypes = {
     value: PropTypes.string,
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
-    errorMessage: PropTypes.string
+    errorMessage: PropTypes.string,
+    required: PropTypes.bool
   }

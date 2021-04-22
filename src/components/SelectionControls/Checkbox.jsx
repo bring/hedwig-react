@@ -8,7 +8,8 @@ export default function Checkbox({
   value,
   checked,
   disabled,
-  errorMessage
+  errorMessage,
+  required,
 }) {
   const variants = useContext(FieldsetContext)
   let classes = []
@@ -25,8 +26,9 @@ export default function Checkbox({
       value={value}
       checked={checked}
       disabled={disabled}
-      settings={classes}
+      variants={classes}
       errorMessage={errorMessage}
+      required={required}
     />
   )
 }
@@ -41,5 +43,7 @@ Checkbox.propTypes = {
   value: PropTypes.string,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
-  errorMessage: PropTypes.string
+  errorMessage: PropTypes.string,
+  required: PropTypes.bool,
+  onClick: PropTypes.func
 }

@@ -4,7 +4,8 @@ import Fieldset from './Fieldset'
 
 export default {
   title: 'Components/Fieldset/With bounding checkboxes',
-  component: Fieldset
+  component: Fieldset,
+  
 }
 
 const Template = (args) => (
