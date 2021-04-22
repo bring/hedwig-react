@@ -44,5 +44,5 @@ BoundingCheckbox.propTypes = {
   disabled: PropTypes.bool,
   errorMessage: PropTypes.string,
   required: PropTypes.bool,
-  onClick:PropTypes.func
+  onClick: PropTypes.func
 }
