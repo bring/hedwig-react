@@ -33,7 +33,7 @@ export default function BaseInput({
         steps={steps}
         placeholder={placeholder}
         disabled={disabled}
-        maxlength={maxLength}
+        maxLength={maxLength}
         onChange={onChange}
         readOnly={readOnly}
 
