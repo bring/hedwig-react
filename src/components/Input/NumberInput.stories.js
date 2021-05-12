@@ -8,7 +8,7 @@ export default {
   }
 };
 
-const Template = (args) => <div style={{width:'300px'}}><NumberInput {...args} /></div>;
+const Template = (args) => <NumberInput {...args} />;
 
 export const input = Template.bind({});
 input.args = {

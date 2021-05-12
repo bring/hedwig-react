@@ -6,7 +6,7 @@ export default {
   component: Dropdown,
 };
 
-const Template = (args) => <div style={{width:'220px'}}><Dropdown {...args} /></div>;
+const Template = (args) => <Dropdown {...args} />;
 
 export const TestDropdown = Template.bind({});
 TestDropdown.args = {
