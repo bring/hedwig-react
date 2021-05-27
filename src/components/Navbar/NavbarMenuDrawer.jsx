@@ -21,7 +21,7 @@ export default function NavbarMenuDrawer({
     }
 
     function handleWindowSizeChange() {
-        setState({ ...state, desktop: window.innerWidth >= 940 })
+        setState((state) => ({ ...state, desktop: window.innerWidth >= 940 }))
     }
 
     useEffect(() => {
