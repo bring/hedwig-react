@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, createRef } from 'react'
+import PropTypes from 'prop-types'
 import { NavbarContext } from './NavbarContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/pro-regular-svg-icons'
@@ -71,4 +72,11 @@ export default function NavbarMenuButton({
             )}
         </button>
     )
+}
+
+NavbarMenuButton.propTypes = {
+    menuName: PropTypes.string.isRequired,
+    menuTitle: PropTypes.string.isRequired,
+    closeName: PropTypes.string.isRequired,
+    closeTitle: PropTypes.string.isRequired
 }

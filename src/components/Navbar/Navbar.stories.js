@@ -69,7 +69,7 @@ const menuSections = [
 const Template = (args) => (
     <div style={{ height: '600px' }}>
         <Navbar {...args}>
-            <NavbarLogoIcon title='Go to homepage' icon='posten' href='#' />
+            <NavbarLogoIcon title='Go to homepage' logo='posten' href='#' />
             <NavbarSkipToMain title='Skip to main content' href='#main' />
             <NavbarSelector items={selectorItems} />
             <NavbarMenu>

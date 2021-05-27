@@ -15,7 +15,7 @@ export default function NavbarMenuDrawer({
 
     const style = {
         transform: 'rotateX(0deg)',
-        'transform-origin': 'top',
+        transformOrigin: 'top',
         opacity: '1',
         visibility: 'visible'
     }

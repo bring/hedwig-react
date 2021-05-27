@@ -1,23 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ServiceIcon from '../ServiceIcon/ServiceIcon'
 
-export default function NavbarLogoIcon({ href, icon, title }) {
+export default function NavbarLogoIcon({ href, logo, title }) {
     return (
         <a href={href} className='hw-navbar__logo' style={{ zIndex: '300' }}>
-            <svg
+            <ServiceIcon
+                icon={'logo-' + logo}
+                title={title}
                 className='hw-navbar__logo-standard'
-                aria-labelledby='Logo'
-                role='img'
-            >
-                <title id='Logo'>{title}</title>
-                <use xlinkHref={'#logo-' + icon} />
-            </svg>
+            />
         </a>
     )
 }
 
 NavbarLogoIcon.propTypes = {
     href: PropTypes.string.isRequired,
-    icon: PropTypes.oneOf(['bring', 'posten']).isRequired,
+    logo: PropTypes.oneOf(['bring', 'posten']).isRequired,
     title: PropTypes.string.isRequired
 }

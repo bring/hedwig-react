@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/pro-regular-svg-icons'
 import { NavbarContext } from './NavbarContext'
@@ -20,4 +21,8 @@ export default function NavbarSearchButton({ text }) {
             />
         </button>
     )
+}
+
+NavbarSearchButton.propTypes = {
+    text: PropTypes.string.isRequired
 }
