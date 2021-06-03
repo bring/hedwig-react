@@ -4,11 +4,15 @@ import NavbarLogoIcon from './NavbarLogoIcon'
 import NavbarSkipToMain from './NavbarSkipToMain'
 import NavbarSelector from './NavbarSelector'
 import NavbarLoginLink from './NavbarLoginLink'
+import NavbarDrawer from './NavbarDrawer'
 import NavbarMenu from './NavbarMenu'
 import NavbarSearchButton from './NavbarSearchButton'
 import NavbarSearch from './NavbarSearch'
 import NavbarMenuButton from './NavbarMenuButton'
 import NavbarMenuDrawer from './NavbarMenuDrawer'
+import Block from '../../layout/Block/Block'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/pro-regular-svg-icons'
 
 export default {
     title: 'Components/Navbar',
@@ -66,6 +70,55 @@ const menuSections = [
     }
 ]
 
+function DrawerContents() {
+    return (
+        <>
+            <Block mb='on' classList='hw-text-center'>
+                <FontAwesomeIcon
+                    icon={faUser}
+                    size='7x'
+                    className='hw-color-gray-light'
+                />
+            </Block>
+            <Block mb='on'>
+                <h3 className='hw-text-center'>Where do you want to log in?</h3>
+            </Block>
+            <Block mt='medium-3'>
+                <a
+                    className='hw-button hw-button--large hw-button--full hw-button--primary'
+                    href='#'
+                >
+                    Mybring
+                </a>
+                <a
+                    className='hw-button hw-button--large hw-button--full hw-button--secondary'
+                    href='#'
+                >
+                    My post
+                </a>
+                <a
+                    className='hw-button hw-button--large hw-button--full hw-button--secondary'
+                    href='#'
+                >
+                    Stamp store
+                </a>
+                <a
+                    className='hw-button hw-button--large hw-button--full hw-button--secondary'
+                    href='#'
+                >
+                    Digipost
+                </a>
+                <a
+                    className='hw-button hw-button--large hw-button--full hw-button--secondary'
+                    href='#'
+                >
+                    MINe - Offshore &amp; Energy
+                </a>
+            </Block>
+        </>
+    )
+}
+
 const Template = (args) => (
     <div style={{ height: '600px' }}>
         <Navbar {...args}>
@@ -76,6 +129,9 @@ const Template = (args) => (
                 <NavbarSearchButton text='Search' />
                 {/* <NavbarLoginMenu /> */}
                 <NavbarLoginLink href='#' text='Min side' />
+                <NavbarDrawer buttonText='Drawer' closeTitle='Close'>
+                    <DrawerContents />
+                </NavbarDrawer>
                 <NavbarMenuButton
                     menuName='Menu'
                     menuTitle='Show menu'
