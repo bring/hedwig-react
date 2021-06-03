@@ -18,7 +18,7 @@ export const SearchWithSuggestions = Template.bind({})
 SearchWithSuggestions.args = {
     label: 'Label',
     buttonLabel: 'Search',
-    advancedSuggestions: true
+    extendedSuggestions: true
 }
 
 SearchWithSuggestions.storyName = 'Search suggestions - advanced'

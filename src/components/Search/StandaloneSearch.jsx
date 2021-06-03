@@ -8,12 +8,12 @@ import { SuggestionsProvider } from './SuggestionsContext'
 export default function StandaloneSearch({
     label,
     buttonLabel,
-    advancedSuggestions,
+    extendedSuggestions,
     onChange,
     onClick,
     children
 }) {
-    const suggestionsClass = advancedSuggestions
+    const extedendedClass = extendedSuggestions
         ? ''
         : 'hw-search__suggestions--simple'
 
@@ -45,10 +45,8 @@ export default function StandaloneSearch({
                         <FontAwesomeIcon icon={faTimesCircle} />
                     </button>
                 </div>
-                <SuggestionsProvider advancedSuggestions={advancedSuggestions}>
-                    <ul
-                        className={`hw-search__suggestions ${suggestionsClass}`}
-                    >
+                <SuggestionsProvider advancedSuggestions={extendedSuggestions}>
+                    <ul className={`hw-search__suggestions ${extedendedClass}`}>
                         {children}
                     </ul>
                 </SuggestionsProvider>
@@ -65,13 +63,13 @@ export default function StandaloneSearch({
     )
 }
 StandaloneSearch.defaultProps = {
-    advancedSuggestions: false
+    extendedSuggestions: false
 }
 
 StandaloneSearch.propTypes = {
     label: PropTypes.string,
     buttonLabel: PropTypes.string,
-    advancedSuggestions: PropTypes.bool,
+    extendedSuggestions: PropTypes.bool,
     onChange: PropTypes.func,
     onClick: PropTypes.func
 }
