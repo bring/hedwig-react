@@ -3,36 +3,36 @@ import PropTypes from 'prop-types'
 import BaseInput from './BaseInput'
 
 export default function PasswordInput({
-  label,
-  placeholder,
-  variant,
-  disabled,
-  errorMessage,
-  onChange
+    label,
+    placeholder,
+    variant,
+    disabled,
+    errorMessage,
+    onChange
 }) {
-  return (
-    <BaseInput
-      variant={variant}
-      label={label}
-      type='password'
-      placeholder={placeholder}
-      disabled={disabled}
-      onChange={onChange}
-      errorMessage={errorMessage}
-    />
-  )
+    return (
+        <BaseInput
+            variant={variant}
+            label={label}
+            type='password'
+            placeholder={placeholder}
+            disabled={disabled}
+            onChange={onChange}
+            errorMessage={errorMessage}
+        />
+    )
 }
 
 PasswordInput.defaultProps = {
-  disabled: false,
-  type: 'text'
+    disabled: false,
+    type: 'text'
 }
 
 PasswordInput.propTypes = {
-  variant: PropTypes.oneOf(['', 'white', 'line']),
-  disabled: PropTypes.bool,
-  onChange: PropTypes.func,
-  errorMessage: PropTypes.string,
-  placeholder: PropTypes.string,
-  label: PropTypes.string
+    variant: PropTypes.oneOf(['', 'white', 'line']),
+    disabled: PropTypes.bool,
+    onChange: PropTypes.func,
+    errorMessage: PropTypes.string,
+    placeholder: PropTypes.string,
+    label: PropTypes.string
 }

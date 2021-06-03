@@ -1,17 +1,18 @@
-import React from 'react';
-import SecondaryButton from './SecondaryButton';
+import React from 'react'
+import SecondaryButton from './SecondaryButton'
 
 export default {
-  title: 'Components/Buttons/Secondary',
-  component: SecondaryButton,
-};
+    title: 'Components/Buttons/Secondary',
+    component: SecondaryButton
+}
 
-const Template = (args) => <SecondaryButton {...args} >Secondary Button</SecondaryButton>;
+const Template = (args) => (
+    <SecondaryButton {...args}>Secondary Button</SecondaryButton>
+)
 
-export const SButton = Template.bind({});
+export const SButton = Template.bind({})
 SButton.args = {
-  disabled : false,
-};
+    disabled: false
+}
 
-SButton.storyName="Secondary";
-
+SButton.storyName = 'Secondary'

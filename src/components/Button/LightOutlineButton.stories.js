@@ -1,28 +1,27 @@
-import React from 'react';
-import LightOutlineButton from './LightOutlineButton';
+import React from 'react'
+import LightOutlineButton from './LightOutlineButton'
 
 export default {
-  title: 'Components/Buttons/Light Outline',
-  component: LightOutlineButton,
-  parameters: {
-    backgrounds: {
-      default: 'gray-dark',
-      values: [
-        { name: 'gray-dark', value: '#6E6E6E' },
-        { name: 'black', value: '#000000' },
-      ],
-    },
-  }
-};
+    title: 'Components/Buttons/Light Outline',
+    component: LightOutlineButton,
+    parameters: {
+        backgrounds: {
+            default: 'gray-dark',
+            values: [
+                { name: 'gray-dark', value: '#6E6E6E' },
+                { name: 'black', value: '#000000' }
+            ]
+        }
+    }
+}
 
-const Template = (args) => <LightOutlineButton {...args} >Light Outline Button</LightOutlineButton>;
+const Template = (args) => (
+    <LightOutlineButton {...args}>Light Outline Button</LightOutlineButton>
+)
 
-export const PButton = Template.bind({});
+export const PButton = Template.bind({})
 PButton.args = {
-  disabled : false,
-};
+    disabled: false
+}
 
-PButton.storyName="Light Outline";
-
-
-
+PButton.storyName = 'Light Outline'

@@ -1,18 +1,17 @@
-import React from 'react';
-import TextInput from './TextInput';
+import React from 'react'
+import TextInput from './TextInput'
 
 export default {
-  title: 'Components/Input/Text',
-  component: TextInput,
-};
+    title: 'Components/Input/Text',
+    component: TextInput
+}
 
-const Template = (args) => <TextInput {...args} />;
+const Template = (args) => <TextInput {...args} />
 
-export const input = Template.bind({});
+export const input = Template.bind({})
 input.args = {
-  label:'Label',
-  placeholder: 'placeholder here'
-};
+    label: 'Label',
+    placeholder: 'placeholder here'
+}
 
-input.storyName="Text";
-
+input.storyName = 'Text'
