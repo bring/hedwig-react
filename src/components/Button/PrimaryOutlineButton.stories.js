@@ -8,10 +8,8 @@ export default {
 
 const Template = (args) => <PrimaryOutlineButton {...args} >Primary Outline Button</PrimaryOutlineButton>;
 
-export const PButton = Template.bind({});
-PButton.args = {
+export const PrimaryOutline = Template.bind({});
+PrimaryOutline.args = {
   disabled : false,
 };
-
-PButton.storyName="Primary Outline";
 

@@ -8,10 +8,9 @@ export default {
 
 const Template = (args) => <ChatButton {...args}></ChatButton>
 
-export const CButton = Template.bind({})
-CButton.args = {
+export const Chat = Template.bind({})
+Chat.args = {
   disabled: false,
   onClick: () => alert('This is an onclick test')
 }
 
-CButton.storyName = 'Chat'

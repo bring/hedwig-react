@@ -8,10 +8,9 @@ export default {
 
 const Template = (args) => <SecondaryButton {...args} >Secondary Button</SecondaryButton>;
 
-export const SButton = Template.bind({});
-SButton.args = {
+export const Secondary = Template.bind({});
+Secondary.args = {
   disabled : false,
 };
 
-SButton.storyName="Secondary";
 
