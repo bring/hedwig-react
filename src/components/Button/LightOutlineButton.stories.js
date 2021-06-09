@@ -17,12 +17,11 @@ export default {
 
 const Template = (args) => <LightOutlineButton {...args} >Light Outline Button</LightOutlineButton>;
 
-export const PButton = Template.bind({});
-PButton.args = {
+export const LightOutline = Template.bind({});
+LightOutline.args = {
   disabled : false,
 };
 
-PButton.storyName="Light Outline";
 
 
 
