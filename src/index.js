@@ -38,5 +38,5 @@ export { default as Card } from './components/Card/Card.jsx'
 export { default as Accordion } from './components/Accordion/Accordion.jsx'
 export { default as AccordionItem } from './components/Accordion/AccordionItem.jsx'
 
-export { default as StandaloneSearch } from './components/Search/Search.jsx'
+export { default as StandaloneSearch } from './components/Search/StandaloneSearch.jsx'
 export { default as SearchSuggestion } from './components/Search/SearchSuggestion.jsx'
