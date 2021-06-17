@@ -122,7 +122,12 @@ function DrawerContents() {
 const Template = (args) => (
     <div style={{ height: '600px' }}>
         <Navbar {...args}>
-            <NavbarLogoIcon title='Go to homepage' logo='posten' href='#' />
+            <NavbarLogoIcon
+                title='Posten logo'
+                logo='posten'
+                href='#'
+                ariaLabel='Go to homepage'
+            />
             <NavbarSkipToMain title='Skip to main content' href='#main' />
             <NavbarSelector items={selectorItems} />
             <NavbarMenu>
