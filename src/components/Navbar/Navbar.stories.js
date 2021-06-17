@@ -128,7 +128,11 @@ const Template = (args) => (
             <NavbarMenu>
                 <NavbarSearchButton text='Search' />
                 {/* <NavbarLoginMenu /> */}
-                <NavbarLoginLink href='#' text='Min side' />
+                <NavbarLoginLink
+                    href='#'
+                    text='My profile'
+                    ariaLabel='Go to my profile'
+                />
                 <NavbarDrawer buttonText='Drawer' closeTitle='Close'>
                     <DrawerContents />
                 </NavbarDrawer>

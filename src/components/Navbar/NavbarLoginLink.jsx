@@ -3,9 +3,13 @@ import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/pro-regular-svg-icons'
 
-export default function NavbarLoginLink({ href, text }) {
+export default function NavbarLoginLink({ href, text, ariaLabel }) {
     return (
-        <a href={href} className='hw-navbar__item'>
+        <a
+            href={href}
+            className='hw-navbar__item'
+            aria-label={ariaLabel || text}
+        >
             {text + ' '}
             <FontAwesomeIcon
                 icon={faUser}
@@ -18,5 +22,6 @@ export default function NavbarLoginLink({ href, text }) {
 
 NavbarLoginLink.propTypes = {
     href: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    ariaLabel: PropTypes.string
 }
