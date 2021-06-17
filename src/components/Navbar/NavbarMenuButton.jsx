@@ -40,7 +40,11 @@ export default function NavbarMenuButton({
     }
 
     return (
-        <button className='hw-navbar__menu-button' onClick={handleClick}>
+        <button
+            className='hw-navbar__menu-button'
+            onClick={handleClick}
+            aria-label={state.menuOpen ? closeTitle : menuTitle}
+        >
             {!state.menuOpen && (
                 <>
                     <span
