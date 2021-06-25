@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/pro-regular-svg-icons'
 import { NavbarContext } from './NavbarContext'
 
-export default function NavbarSearchButton({ text }) {
+export default function NavbarSearchButton({ text, ariaLabel }) {
     const [state, setState] = useContext(NavbarContext)
 
     function handleClick() {
@@ -12,7 +12,11 @@ export default function NavbarSearchButton({ text }) {
     }
 
     return (
-        <button className='hw-navbar__search-button' onClick={handleClick}>
+        <button
+            className='hw-navbar__search-button'
+            onClick={handleClick}
+            aria-label={ariaLabel || text}
+        >
             <span className='hw-navbar__search-text'>{text}</span>
             <FontAwesomeIcon
                 icon={faSearch}
@@ -24,5 +28,6 @@ export default function NavbarSearchButton({ text }) {
 }
 
 NavbarSearchButton.propTypes = {
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    ariaLabel: PropTypes.string
 }

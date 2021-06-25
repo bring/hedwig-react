@@ -131,14 +131,19 @@ const Template = (args) => (
             <NavbarSkipToMain title='Skip to main content' href='#main' />
             <NavbarSelector items={selectorItems} />
             <NavbarMenu>
-                <NavbarSearchButton text='Search' />
+                <NavbarSearchButton text='Search' ariaLabel='Open search' />
                 {/* <NavbarLoginMenu /> */}
                 <NavbarLoginLink
                     href='#'
                     text='My profile'
                     ariaLabel='Go to my profile'
                 />
-                <NavbarDrawer buttonText='Drawer' closeTitle='Close'>
+                <NavbarDrawer
+                    buttonText='Drawer'
+                    closeTitle='Close'
+                    icon={faUser}
+                    ariaLabel='Login options'
+                >
                     <DrawerContents />
                 </NavbarDrawer>
                 <NavbarMenuButton
