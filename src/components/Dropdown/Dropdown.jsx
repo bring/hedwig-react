@@ -25,5 +25,9 @@ export default function Dropdown({
 }
 
 Dropdown.propTypes = {
-    variant: PropTypes.oneOf(['', 'white', 'line'])
+    name: PropTypes.string,
+    label: PropTypes.string,
+    id: PropTypes.string,
+    variant: PropTypes.oneOf(['', 'white', 'line']),
+    onChange: PropTypes.func
 }
