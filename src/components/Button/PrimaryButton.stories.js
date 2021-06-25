@@ -10,10 +10,11 @@ const Template = (args) => (
     <PrimaryButton {...args}>Primary Button</PrimaryButton>
 )
 
-export const PButton = Template.bind({})
-PButton.args = {
+export const Primary = Template.bind({})
+Primary.args = {
     disabled: false,
     onClick: () => alert('This is an onclick test')
 }
 
-PButton.storyName = 'Primary'
+Primary.storyName = 'Primary'
+
