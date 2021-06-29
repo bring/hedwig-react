@@ -9,6 +9,7 @@ export default function PrimaryOutlineButton({
     href,
     disabled,
     ariaControls,
+    classList,
     children
 }) {
     return (
@@ -20,6 +21,7 @@ export default function PrimaryOutlineButton({
             ariaControls={ariaControls}
             onClick={onClick}
             href={href}
+            classList={classList}
         >
             {children}
         </BaseButton>
@@ -37,5 +39,6 @@ PrimaryOutlineButton.propTypes = {
     onClick: PropTypes.func,
     disabled: PropTypes.bool,
     ariaControls: PropTypes.string,
-    href: PropTypes.string
+    href: PropTypes.string,
+    classList: PropTypes.string
 }

@@ -9,7 +9,8 @@ export default function BaseButton({
     href,
     disabled,
     ariaControls,
-    children
+    children,
+    classList
 }) {
     const buttonVariant = variant !== '' ? 'hw-button--' + variant : ''
     const buttonSize = size ? 'hw-button--' + size : ''
@@ -18,7 +19,7 @@ export default function BaseButton({
         return (
             <a
                 href={href}
-                className={`hw-button ${buttonVariant} ${buttonSize}`}
+                className={`hw-button ${buttonVariant} ${buttonSize} ${classList}`}
                 onClick={onClick}
                 disabled={disabled}
             >
@@ -29,7 +30,7 @@ export default function BaseButton({
         return (
             <button
                 type={type}
-                className={`hw-button ${buttonVariant} ${buttonSize}`}
+                className={`hw-button ${buttonVariant} ${buttonSize} ${classList}`}
                 onClick={onClick}
                 disabled={disabled}
                 aria-controls={ariaControls}
@@ -62,5 +63,6 @@ BaseButton.propTypes = {
     onClick: PropTypes.func,
     disabled: PropTypes.bool,
     ariaControls: PropTypes.string,
-    href: PropTypes.string
+    href: PropTypes.string,
+    classList: PropTypes.string
 }

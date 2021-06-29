@@ -4,7 +4,13 @@ import BaseButton from './BaseButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCommentsAlt } from '@fortawesome/pro-solid-svg-icons'
 
-export default function ChatButton({ fixed, onClick, disabled, ariaControls }) {
+export default function ChatButton({
+    fixed,
+    onClick,
+    disabled,
+    ariaControls,
+    classList
+}) {
     const chatVariant = fixed ? 'chat-fixed' : 'chat'
     return (
         <BaseButton
@@ -13,6 +19,7 @@ export default function ChatButton({ fixed, onClick, disabled, ariaControls }) {
             disabled={disabled}
             ariaControls={ariaControls}
             onClick={onClick}
+            classList={classList}
         >
             <FontAwesomeIcon icon={faCommentsAlt} className='' size='2x' />
         </BaseButton>
@@ -28,5 +35,6 @@ ChatButton.propTypes = {
     fixed: PropTypes.bool,
     onClick: PropTypes.func,
     disabled: PropTypes.bool,
-    ariaControls: PropTypes.string
+    ariaControls: PropTypes.string,
+    classList: PropTypes.string
 }
