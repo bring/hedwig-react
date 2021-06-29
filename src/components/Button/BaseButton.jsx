@@ -12,14 +12,16 @@ export default function BaseButton({
     children,
     classList
 }) {
-    const buttonVariant = variant !== '' ? 'hw-button--' + variant : ''
-    const buttonSize = size ? 'hw-button--' + size : ''
+    const classes = ['hw-button']
+    if (variant !== '') classes.push('hw-button--' + variant)
+    if (size) classes.push('hw-button--' + size)
+    if (classList) classes.push(classList)
 
     if (href) {
         return (
             <a
                 href={href}
-                className={`hw-button ${buttonVariant} ${buttonSize} ${classList}`}
+                className={classes.join(' ')}
                 onClick={onClick}
                 disabled={disabled}
             >
@@ -30,7 +32,7 @@ export default function BaseButton({
         return (
             <button
                 type={type}
-                className={`hw-button ${buttonVariant} ${buttonSize} ${classList}`}
+                className={classes.join(' ')}
                 onClick={onClick}
                 disabled={disabled}
                 aria-controls={ariaControls}
