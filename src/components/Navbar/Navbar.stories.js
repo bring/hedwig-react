@@ -26,7 +26,6 @@ const selectorItems = [
     {
         title: 'Business',
         href: '#',
-        selected: false,
         ariaLabel: 'Business section'
     },
     {
