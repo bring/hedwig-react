@@ -25,13 +25,15 @@ export default {
 const selectorItems = [
     {
         title: 'Business',
-        href: '/business',
-        selected: false
+        href: '#',
+        selected: false,
+        ariaLabel: 'Business section'
     },
     {
         title: 'Private',
-        href: '/private',
-        selected: true
+        href: '#',
+        selected: true,
+        ariaLabel: 'Private section'
     }
 ]
 
