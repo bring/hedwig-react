@@ -1,7 +1,7 @@
 {
   "name": "@posten/hedwig-react",
   "homepage": "http://bring.github.io/hedwig-react",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Hedwig react components",
   "author": "Posten",
   "license": "MIT",
