@@ -13,7 +13,8 @@
   "module": "dist/index.modern.js",
   "source": "src/index.js",
   "engines": {
-    "node": ">=10"
+    "node": ">=14.17.4",
+    "npm": ">=7"
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
@@ -35,7 +36,7 @@
     "react": "^17.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
+    "@babel/core": "^7.15.0",
     "@storybook/addon-actions": "^6.1.1",
     "@storybook/addon-essentials": "^6.1.1",
     "@storybook/addon-links": "^6.1.1",
