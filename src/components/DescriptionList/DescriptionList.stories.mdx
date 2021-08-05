@@ -1,0 +1,42 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+
+<Meta title='Components/DescriptionList' />
+
+Use a description list when there is a list of information with key-value pairs.
+
+```bash
+[Base]                 .hw-description-list
+
+Modifiers:
+[Horizontal]           .hw-description-list--horizontal
+```
+
+<Canvas>
+<Story name='Default'>
+    <dl class='hw-description-list'>
+        <dt>Jon Snow</dt>
+        <dd>Lord Commander of the Night's Watch</dd>
+        <dt>Ser Jorah Mormont</dt>
+        <dd>Exiled northern lord from Westeros</dd>
+        <dt>Bran Stark</dt>
+        <dd>The three-eyed raven</dd>
+        <dt>Petyr Baelish</dt>
+        <dd>Master of Coin on the small council</dd>
+    </dl>
+</Story>
+</Canvas>
+
+<Canvas>
+<Story name='Horizontal'>
+    <dl class='hw-description-list hw-description-list--horizontal'>
+        <dt>Tracking number:</dt>
+        <dd>123456789</dd>
+        <dt>Weight:</dt>
+        <dd>3,5 kg</dd>
+        <dt>Size:</dt>
+        <dd>3,3 cm x 6 cm x 1 cm</dd>
+        <dt>Color:</dt>
+        <dd>Red</dd>
+    </dl>
+</Story>
+</Canvas>
