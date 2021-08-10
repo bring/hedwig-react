@@ -4,11 +4,11 @@ import { ExpandedProvider } from './ExpandedContext'
 
 export default function Accordion({ children, allowMultiple, menu }) {
     return (
-        <ul className={`hw-accordion${menu ? ' hw-accordion--menu' : ''}`}>
+        <div className='hw-accordion'>
             <ExpandedProvider allowMultiple={allowMultiple}>
                 {children}
             </ExpandedProvider>
-        </ul>
+        </div>
     )
 }
 
