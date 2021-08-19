@@ -1,11 +1,11 @@
-import React from 'react';
-import Block from './Block';
+import React from 'react'
+import Block from './Block'
 
 export default {
-  title: 'Layout/Block',
-  component: Block
-};
+    title: 'Layout/Block',
+    component: Block
+}
 
-const Template = (args) => <Block {...args}>Block</Block>;
+const Template = (args) => <Block {...args}>Block</Block>
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})

@@ -20,6 +20,9 @@ export { default as TextInput } from './components/Input/TextInput.jsx'
 export { default as NumberInput } from './components/Input/NumberInput.jsx'
 export { default as PasswordInput } from './components/Input/PasswordInput.jsx'
 
+export { default as Checkbox } from './components/SelectionControls/Checkbox.jsx'
+export { default as BoundingCheckbox } from './components/SelectionControls/BoundingCheckbox.jsx'
+
 export { default as InfoBox } from './components/InfoBox/InfoBox.jsx'
 export { default as WarningBox } from './components/WarningSubtle/WarningSubtle.jsx'
 export { default as InfoSubtle } from './components/InfoSubtle/InfoSubtle.jsx'

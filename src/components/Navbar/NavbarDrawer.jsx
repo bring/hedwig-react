@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import Drawer from '../Drawer/Drawer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/pro-regular-svg-icons'
 
 export default function NavbarDrawer({
     buttonText,
@@ -36,4 +36,11 @@ export default function NavbarDrawer({
             </Drawer>
         </>
     )
+}
+
+NavbarDrawer.propTypes = {
+    buttonText: PropTypes.string.isRequired,
+    closeTitle: PropTypes.string.isRequired,
+    icon: PropTypes.object.isRequired,
+    ariaLabel: PropTypes.string
 }

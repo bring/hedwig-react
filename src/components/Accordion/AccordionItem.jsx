@@ -50,7 +50,10 @@ export default function AccordionItem({ title, children, expanded }) {
 
     return (
         <li
-            className='hw-accordion__item'
+            className={
+                'hw-accordion__item' +
+                (showExpanded ? ' hw-accordion__item--expanded' : '')
+            }
             style={{
                 height: showExpanded
                     ? triggerHeight + contentHeight + 'px'
