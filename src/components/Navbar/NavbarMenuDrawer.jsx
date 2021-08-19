@@ -5,11 +5,13 @@ import Block from '../../layout/Block/Block'
 import ServiceIcon from '../ServiceIcon/ServiceIcon'
 import Accordion from '../Accordion/Accordion'
 import AccordionItem from '../Accordion/AccordionItem'
+import NavbarSelector from './NavbarSelector'
 
 export default function NavbarMenuDrawer({
     featuredLinks,
     loginLink,
-    menuSections
+    menuSections,
+    selectorItems
 }) {
     const [state, setState] = useContext(NavbarContext)
 
@@ -80,6 +82,7 @@ export default function NavbarMenuDrawer({
     function Mobile() {
         return (
             <div className='hw-navbar__drawer-mobile'>
+                <NavbarSelector items={selectorItems} desktop={false} />
                 {(featuredLinks || loginLink) && (
                     <Block mt='medium-2'>
                         <ul className='hw-linklist'>
