@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function BaseLink({ href, size, type, children }) {
+export default function BaseLink({ href, title, size, type, children }) {
   let modifier = type != '' ? ' hw-link--' + type : ''
   if (size != '') {
     modifier += ' hw-link--' + size
   }
 
   return (
-    <a href={href} className={'hw-link' + modifier}>
+    <a href={href} title={title} className={'hw-link' + modifier}>
       {children}
     </a>
   )
@@ -21,6 +21,7 @@ BaseLink.defaultProps = {
 
 BaseLink.propTypes = {
   href: PropTypes.string.isRequired,
+  title: PropTypes.string,
   size: PropTypes.oneOf(['small', 'big', '']),
   type: PropTypes.oneOf(['solid', 'inverted', 'no-underline', ''])
 }
