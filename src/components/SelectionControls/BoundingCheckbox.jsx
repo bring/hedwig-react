@@ -4,6 +4,7 @@ import FieldsetContext, { FieldsetProvider } from '../Fieldset/FieldsetContext'
 import BaseCheckbox from './BaseCheckbox'
 
 export default function BoundingCheckbox({
+  name,
   label,
   value,
   checked,
@@ -25,6 +26,7 @@ export default function BoundingCheckbox({
 
   return (
     <BaseCheckbox
+      name={name}
       label={label}
       value={value}
       checked={checked}
@@ -38,6 +40,7 @@ export default function BoundingCheckbox({
 }
 
 BoundingCheckbox.propTypes = {
+  name: PropTypes.string,
   label: PropTypes.string,
   value: PropTypes.string,
   checked: PropTypes.bool,

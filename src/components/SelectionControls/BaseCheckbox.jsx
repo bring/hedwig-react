@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 export default function BaseCheckbox({
+    name,
     label,
     value,
     checked,
@@ -27,6 +28,7 @@ export default function BaseCheckbox({
             <label className={classes}>
                 {label}
                 <input
+                    name={name}
                     type='checkbox'
                     value={value}
                     defaultChecked={checked}
@@ -52,6 +54,7 @@ BaseCheckbox.defaultProps = {
 }
 
 BaseCheckbox.propTypes = {
+    name: PropTypes.string,
     label: PropTypes.string,
     value: PropTypes.string,
     checked: PropTypes.bool,

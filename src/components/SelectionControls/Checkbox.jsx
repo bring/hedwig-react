@@ -4,6 +4,7 @@ import FieldsetContext, { FieldsetProvider } from '../Fieldset/FieldsetContext'
 import BaseCheckbox from './BaseCheckbox'
 
 export default function Checkbox({
+  name,
   label,
   value,
   checked,
@@ -23,6 +24,7 @@ export default function Checkbox({
 
   return (
     <BaseCheckbox
+      name={name}
       label={label}
       value={value}
       checked={checked}
@@ -41,6 +43,7 @@ Checkbox.defaultProps = {
 }
 
 Checkbox.propTypes = {
+  name: PropTypes.string,
   label: PropTypes.string,
   value: PropTypes.string,
   checked: PropTypes.bool,
