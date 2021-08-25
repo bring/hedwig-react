@@ -3,7 +3,7 @@ import Checkbox from '../SelectionControls/Checkbox'
 import Fieldset from './Fieldset'
 
 export default {
-  title: 'Components/Fieldset/With checkboxes',
+  title: 'Components/Fieldset/With horizontal checkboxes',
   component: Fieldset
 }
 
@@ -20,4 +20,4 @@ fieldset.args = {
   selectionControls: ['horisontal']
 }
 
-fieldset.storyName = 'With checkboxes'
+fieldset.storyName = 'With horizontal checkboxes'

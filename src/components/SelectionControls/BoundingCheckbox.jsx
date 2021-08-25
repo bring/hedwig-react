@@ -21,7 +21,7 @@ export default function BoundingCheckbox({
     })
   }
 
-  classes.push('bounding')
+  //classes.push('bounding')
 
   return (
     <BaseCheckbox

@@ -14,10 +14,10 @@ const Template = (args) => (
   </Fieldset>
 )
 
-export const fieldset = Template.bind({})
-fieldset.args = {
+export const fieldsetWithBoundignCheckboxes = Template.bind({})
+fieldsetWithBoundignCheckboxes.args = {
   legend: 'Fieldset legend',
   selectionControls: ['bounding', 'full']
 }
 
-fieldset.storyName = 'With bounding checkboxes'
+fieldsetWithBoundignCheckboxes.storyName = 'With bounding checkboxes'
