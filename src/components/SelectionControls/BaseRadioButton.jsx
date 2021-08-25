@@ -49,6 +49,7 @@ BaseRadioButton.defaultProps = {
 }
 
 BaseRadioButton.propTypes = {
+    name: PropTypes.string,
     label: PropTypes.string,
     value: PropTypes.string,
     disabled: PropTypes.bool,

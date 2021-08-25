@@ -4,6 +4,7 @@ import FieldsetContext, { FieldsetProvider } from '../Fieldset/FieldsetContext'
 import BaseRadioButton from './BaseRadioButton'
 
 export default function RadioButton({
+    name,
     label,
     value,
     disabled,
@@ -24,6 +25,7 @@ export default function RadioButton({
 
     return (
         <BaseRadioButton
+            name={name}
             label={label}
             value={value}
             disabled={disabled}
@@ -40,6 +42,7 @@ RadioButton.defaultProps = {
 }
 
 RadioButton.propTypes = {
+    name: PropTypes.string,
     label: PropTypes.string,
     value: PropTypes.string,
     disabled: PropTypes.bool,
