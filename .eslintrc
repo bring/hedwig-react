@@ -4,7 +4,8 @@
     "standard",
     "standard-react",
     "plugin:prettier/recommended",
-    "prettier"
+    "prettier",
+    "plugin:react/recommended"
   ],
   "env": {
     "node": true
