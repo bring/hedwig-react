@@ -12,7 +12,7 @@ export default function BaseCheckbox({
     required,
     onClick
 }) {
-    let classes = ''
+    let classes = 'hw-checkbox'
     if (variants) {
         variants.forEach((element) => {
             classes += ' hw-checkbox--' + element
@@ -24,24 +24,27 @@ export default function BaseCheckbox({
     }
 
     return (
-        <label className={'hw-checkbox' + classes}>
-            {label}
-            <input
-                name={name}
-                type='checkbox'
-                value={value}
-                defaultChecked={checked}
-                disabled={disabled}
-                required={required}
-                onClick={onClick}
-            />
-            <i className='hw-checkbox__indicator' />
+        <>
+            <label className={classes}>
+                {label}
+                <input
+                    name={name}
+                    type='checkbox'
+                    value={value}
+                    defaultChecked={checked}
+                    disabled={disabled}
+                    required={required}
+                    onClick={onClick}
+                />
+                <i className='hw-checkbox__indicator'></i>
+            </label>
             {errorMessage && (
                 <div className='hw-error-simple hw-error--align-left'>
                     {errorMessage}
                 </div>
             )}
-        </label>
+
+        </>
     )
 }
 

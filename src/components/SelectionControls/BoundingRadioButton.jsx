@@ -1,35 +1,24 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import FieldsetContext, { FieldsetProvider } from '../Fieldset/FieldsetContext'
-import BaseCheckbox from './BaseCheckbox'
+import BaseRadioButton from './BaseRadioButton'
 
-export default function BoundingCheckbox({
+export default function BoundingRadioButton({
     name,
     label,
     value,
-    checked,
     disabled,
     errorMessage,
     required,
     onClick
 }) {
-    const variants = useContext(FieldsetContext)
-    let classes = ['bounding']
-    if (variants) {
-        var selectionControls = variants.find(
-            (x) => x.name === 'selectionControls'
-        )
-        selectionControls.value.forEach((element) => {
-            classes.push(element)
-        })
-    }
+    const classes = ['bounding']
 
     return (
-        <BaseCheckbox
+        <BaseRadioButton
             name={name}
             label={label}
             value={value}
-            checked={checked}
             disabled={disabled}
             variants={classes}
             errorMessage={errorMessage}
@@ -39,13 +28,15 @@ export default function BoundingCheckbox({
     )
 }
 
-BoundingCheckbox.propTypes = {
+BoundingRadioButton.defaultProps = {
+    errorMessage: ''
+}
+
+BoundingRadioButton.propTypes = {
     name: PropTypes.string,
     label: PropTypes.string,
     value: PropTypes.string,
-    checked: PropTypes.bool,
     disabled: PropTypes.bool,
     errorMessage: PropTypes.string,
-    required: PropTypes.bool,
     onClick: PropTypes.func
 }

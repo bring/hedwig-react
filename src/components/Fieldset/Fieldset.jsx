@@ -7,9 +7,9 @@ export default function Fieldset({ legend, selectionControls, children }) {
 
   return (
     <FieldsetProvider value={settings}>
-      <fieldset class='hw-fieldset'>
-        <legend class='hw-fieldset__legend'>{legend}</legend>
-        <div class='hw-fieldset__content'>{children}</div>
+      <fieldset className='hw-fieldset'>
+        <legend className='hw-fieldset__legend'>{legend}</legend>
+        <div className='hw-fieldset__content'>{children}</div>
       </fieldset>
     </FieldsetProvider>
   )
