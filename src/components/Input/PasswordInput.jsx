@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import BaseInput from './BaseInput'
 
 export default function PasswordInput({
+  name,
   label,
   placeholder,
   variant,
@@ -12,6 +13,7 @@ export default function PasswordInput({
 }) {
   return (
     <BaseInput
+      name={name}
       variant={variant}
       label={label}
       type='password'

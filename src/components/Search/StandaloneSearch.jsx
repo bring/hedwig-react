@@ -7,6 +7,7 @@ import { SuggestionsProvider } from './SuggestionsContext'
 
 export default function StandaloneSearch({
     label,
+    placeholder,
     buttonLabel,
     extendedSuggestions,
     onChange,
@@ -31,6 +32,7 @@ export default function StandaloneSearch({
                         className='hw-search__input'
                         type='text'
                         aria-label='Search'
+                        placeholder={placeholder}
                         onChange={onChange}
                     />
                     <FontAwesomeIcon
@@ -68,6 +70,7 @@ StandaloneSearch.defaultProps = {
 
 StandaloneSearch.propTypes = {
     label: PropTypes.string,
+    placeholder: PropTypes.string,
     buttonLabel: PropTypes.string,
     extendedSuggestions: PropTypes.bool,
     onChange: PropTypes.func,
