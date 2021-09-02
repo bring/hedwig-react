@@ -17,12 +17,12 @@ export default function Breadcrumbs({ crumbs, current }) {
             window.removeEventListener('resize', handleWindowSizeChange)
     }, [])
 
-    function Crumb({ crumb }) {
+    function Crumb({ crumb: { linktext, href, title } }) {
         return (
             <>
                 <span className='hw-breadcrumb'>
-                    <a className='hw-link' href={crumb.href}>
-                        {crumb.title}
+                    <a className='hw-link' href={href} title={title}>
+                        {linktext}
                     </a>
                 </span>
                 <FontAwesomeIcon
@@ -36,43 +36,56 @@ export default function Breadcrumbs({ crumbs, current }) {
     function Desktop() {
         return (
             <>
-                {crumbs.map((crumb) => (
-                    <Crumb crumb={crumb} key={crumb.title + crumb.href} />
-                ))}
+                {crumbs &&
+                    crumbs.map((crumb) => (
+                        <Crumb
+                            crumb={crumb}
+                            key={crumb.linktext + crumb.href}
+                        />
+                    ))}
                 <span className='hw-breadcrumb__current'>{current}</span>
             </>
         )
     }
 
-    function Mobile({ crumb }) {
+    function Mobile({ crumb: { linktext, href, title } }) {
         return (
             <div className='hw-breadcrumb'>
-                <a className='hw-link' href={crumb.href}>
+                <a className='hw-link' href={href} title={title}>
                     <FontAwesomeIcon
                         icon={faChevronRight}
                         className='hw-breadcrumb__arrow-mobile'
                         size='xs'
                         width='10'
                     />
-                    {crumb.title}
+                    {linktext}
                 </a>
             </div>
         )
     }
 
-    return (
+    /**
+     * In case the crumbs are [] and showing on mobile
+     * we should not show anything
+     */
+    function shouldShowAnything() {
+        return desktop || (crumbs && crumbs.length > 0 && !desktop)
+    }
+
+    return shouldShowAnything() ? (
         <div className='hw-breadcrumbs'>
             {desktop && <Desktop />}
             {!desktop && <Mobile crumb={crumbs[crumbs.length - 1]} />}
         </div>
-    )
+    ) : null
 }
 
 Breadcrumbs.propTypes = {
     crumbs: PropTypes.arrayOf(
-        PropTypes.shape({
-            title: PropTypes.string,
-            href: PropTypes.string
+        PropTypes.exact({
+            linktext: PropTypes.string.isRequired,
+            href: PropTypes.string.isRequired,
+            title: PropTypes.string
         })
     ),
     current: PropTypes.string.isRequired
