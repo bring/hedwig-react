@@ -17,6 +17,13 @@ We are using icons from Font Awesome Pro wich requires you to obtain a licence. 
 export NPM_TOKEN=[your auth token]
 ```
 
+## Styling
+Our components are functional components only, so you will still have to import fonts and styling 
+```bash
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@posten/hedwig@{version}/assets/fonts.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@posten/hedwig@{version}/dist/{posten/bring}.css">
+```
+
 ## Usage
 
 ```jsx
