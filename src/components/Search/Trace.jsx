@@ -66,7 +66,7 @@ export default function Trace({
 Trace.propTypes = {
     ariaLabel: PropTypes.string,
     placeholder: PropTypes.string,
-    buttonLabel: PropTypes.string,
+    buttonLabel: PropTypes.string.isRequired,
     onChange: PropTypes.func
 }
 
