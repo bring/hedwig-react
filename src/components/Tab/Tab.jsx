@@ -46,6 +46,9 @@ export default function Tab({ items, selected, onClick }) {
                 className='hw-tab__item'
                 ref={selectedItem === id ? selectedRef : null}
                 onClick={() => handleClick(id)}
+                role='tab'
+                aria-selected={id === selectedItem}
+                tabIndex='0'
             >
                 {content}
             </a>
@@ -53,7 +56,7 @@ export default function Tab({ items, selected, onClick }) {
     }
 
     return (
-        <div className='hw-tab' ref={tabRef}>
+        <div className='hw-tab' role='tablist' ref={tabRef}>
             {items.map((item) => (
                 <Item key={item.id} id={item.id} content={item.content} />
             ))}
