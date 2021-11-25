@@ -21,7 +21,7 @@ const App = () => {
 }
 
 function testSearch(e) {
-  alert("Search button was pressed with value: " + e.toString())
+  alert("Search button was pressed with value: " + e)
 }
 
 
