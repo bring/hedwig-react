@@ -22,7 +22,9 @@ export default function StandaloneSearch({
 
     function handleOnChange(e) {
         setHasValue(inputRef.current.value !== '')
-        onChange(e)
+        if(onChange) {
+            onChange(e)
+        }    
     }
 
     function reset() {
