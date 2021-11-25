@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/pro-regular-svg-icons'
@@ -17,12 +17,26 @@ export default function StandaloneSearch({
     const extedendedClass = extendedSuggestions
         ? ''
         : 'hw-search__suggestions--simple'
+    const [hasValue, setHasValue] = useState(false)
+    const inputRef = useRef()
+
+    function handleOnChange(e) {
+        setHasValue(inputRef.current.value !== '')
+        onChange(e)
+    }
+
+    function reset() {
+        inputRef.current.value = ''
+        setHasValue(false)
+    }
 
     return (
         <label className='hw-label'>
             {label}
             <div
-                className='hw-search hw-search--standalone'
+                className={`hw-search hw-search--standalone ${
+                    hasValue ? 'hw-search--hasvalue' : ''
+                }`}
                 data-hw-search
                 data-hw-search-placeholders=''
             >
@@ -33,7 +47,8 @@ export default function StandaloneSearch({
                         type='text'
                         aria-label='Search'
                         placeholder={placeholder}
-                        onChange={onChange}
+                        onChange={(e) => handleOnChange(e)}
+                        ref={inputRef}
                     />
                     <FontAwesomeIcon
                         icon={faSearch}
@@ -43,6 +58,7 @@ export default function StandaloneSearch({
                     <button
                         className='hw-search__button-inside'
                         data-hw-search-reset
+                        onClick={() => reset()}
                     >
                         <FontAwesomeIcon icon={faTimesCircle} />
                     </button>
