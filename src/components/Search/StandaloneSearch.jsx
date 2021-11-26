@@ -22,14 +22,18 @@ export default function StandaloneSearch({
 
     function handleOnChange(e) {
         setHasValue(inputRef.current.value !== '')
-        if(onChange) {
+        if (onChange) {
             onChange(e)
-        }    
+        }
     }
 
     function reset() {
         inputRef.current.value = ''
         setHasValue(false)
+    }
+
+    function handleOnclick() {
+        onClick(inputRef.current.value)
     }
 
     return (
@@ -73,7 +77,7 @@ export default function StandaloneSearch({
 
                 <button
                     type='submit'
-                    onClick={onClick}
+                    onClick={() => handleOnclick()}
                     className='hw-button hw-button--primary hw-search__button'
                 >
                     {buttonLabel}
