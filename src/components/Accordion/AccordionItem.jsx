@@ -14,6 +14,8 @@ export default function AccordionItem({ title, children, expanded }) {
     const trigger = createRef()
     const contentRef = createRef()
 
+    const id = "item-" + Math.floor(Math.random() * 10000)
+
     useEffect(() => {
         if (
             expanded &&
@@ -64,11 +66,13 @@ export default function AccordionItem({ title, children, expanded }) {
                 className='hw-accordion__trigger'
                 onClick={toggleItem}
                 ref={trigger}
+                aria-controls={id}
+                aria-expanded={isExpanded}
             >
-                {title}
+                {title} {isExpanded}
                 <div className='hw-accordion__icon' />
             </button>
-            <div className='hw-accordion__contents' ref={contentRef}>
+            <div id={id} className='hw-accordion__contents' ref={contentRef}>
                 {children}
             </div>
         </li>
