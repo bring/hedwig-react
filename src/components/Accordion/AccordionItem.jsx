@@ -69,7 +69,7 @@ export default function AccordionItem({ title, children, expanded }) {
                 aria-controls={id}
                 aria-expanded={isExpanded}
             >
-                {title} {isExpanded}
+                {title}
                 <div className='hw-accordion__icon' />
             </button>
             <div id={id} className='hw-accordion__contents' ref={contentRef}>
