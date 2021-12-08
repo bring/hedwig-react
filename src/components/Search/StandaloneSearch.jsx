@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/pro-regular-svg-icons'
 import { faTimesCircle } from '@fortawesome/pro-solid-svg-icons'
 import { SuggestionsProvider } from './SuggestionsContext'
+import SearchSuggestion from './SearchSuggestion'
+import './search.css'
 
 export default function StandaloneSearch({
     label,
@@ -96,5 +98,6 @@ StandaloneSearch.propTypes = {
     buttonLabel: PropTypes.string,
     extendedSuggestions: PropTypes.bool,
     onChange: PropTypes.func,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    children: PropTypes.arrayOf(PropTypes.objectOf(SearchSuggestion))
 }
