@@ -21,10 +21,18 @@ npm install @posten/hedwig-react
 ## Icons
 We are using icons from Font Awesome Pro wich requires you to obtain a licence. The auth token from your licence will need to be added to an environment variable. For Posten and Bring developers, please contact the Hedwig contributors for this token. For other users, a licence can be obtained <a href="https://fontawesome.com">here</a>
 
-
 ```bash
 export NPM_TOKEN=[your auth token]
 ```
+
+Then you will need to include the following in your .npmrc file for your project:
+
+```bash
+@fortawesome:registry=https://npm.fontawesome.com/
+//npm.fontawesome.com/:_authToken=${NPM_TOKEN}
+```
+
+
 
 ## Styling
 Our components are functional components only, so you will still have to import fonts and styling 
