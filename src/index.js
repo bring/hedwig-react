@@ -23,6 +23,9 @@ export { default as PasswordInput } from './components/Input/PasswordInput.jsx'
 export { default as Checkbox } from './components/SelectionControls/Checkbox.jsx'
 export { default as BoundingCheckbox } from './components/SelectionControls/BoundingCheckbox.jsx'
 
+export { default as RadioButton } from './components/SelectionControls/RadioButton.jsx'
+export { default as BoundingRadioButton } from './components/SelectionControls/BoundingRadioButton.jsx'
+
 export { default as InfoBox } from './components/InfoBox/InfoBox.jsx'
 export { default as WarningBox } from './components/WarningSubtle/WarningSubtle.jsx'
 export { default as InfoSubtle } from './components/InfoSubtle/InfoSubtle.jsx'
