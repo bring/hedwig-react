@@ -23,7 +23,7 @@ export default function BaseRadioButton({
     }
 
     return (
-        <>
+        <React.Fragment>
       <label className={classes}>
           <input
             type='radio'
@@ -39,7 +39,7 @@ export default function BaseRadioButton({
         {errorMessage && 
             <div class="hw-error-simple hw-error--align-left">{errorMessage}</div>
         }
-        </>
+        </React.Fragment>
     )
 }
 
