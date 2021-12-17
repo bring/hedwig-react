@@ -15,8 +15,8 @@ export default function Fieldset({ legend, selectionControls, children }) {
   )
 }
 
-BaseCheckbox.propTypes = {
-  settings: PropTypes.arrayOf(
+Fieldset.propTypes = {
+  selectionControls: PropTypes.arrayOf(
     PropTypes.oneOf(['bounding', 'full', 'horisontal'])
   )
 }
