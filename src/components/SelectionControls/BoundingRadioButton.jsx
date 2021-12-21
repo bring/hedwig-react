@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import FieldsetContext, { FieldsetProvider } from '../Fieldset/FieldsetContext'
 import BaseRadioButton from './BaseRadioButton'
 
 export default function BoundingRadioButton({
@@ -10,6 +9,7 @@ export default function BoundingRadioButton({
     disabled,
     errorMessage,
     required,
+    defaultChecked,
     onClick
 }) {
     const classes = ['bounding']
@@ -23,6 +23,7 @@ export default function BoundingRadioButton({
             variants={classes}
             errorMessage={errorMessage}
             required={required}
+            defaultChecked={defaultChecked}
             onClick={onClick}
         />
     )
@@ -37,6 +38,8 @@ BoundingRadioButton.propTypes = {
     label: PropTypes.string,
     value: PropTypes.string,
     disabled: PropTypes.bool,
+    required: PropTypes.bool,
+    defaultChecked: PropTypes.bool,
     errorMessage: PropTypes.string,
     onClick: PropTypes.func
 }
