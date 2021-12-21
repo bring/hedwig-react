@@ -10,12 +10,13 @@ export default function RadioButton({
     disabled,
     errorMessage,
     required,
+    defaultChecked,
     onClick
 }) {
     const variants = useContext(FieldsetContext)
-    let classes = []
+    const classes = []
     if (variants) {
-        var selectionControls = variants.find(
+        const selectionControls = variants.find(
             (x) => x.name === 'selectionControls'
         )
         selectionControls.value.forEach((element) => {
@@ -32,6 +33,7 @@ export default function RadioButton({
             variants={classes}
             errorMessage={errorMessage}
             required={required}
+            defaultChecked={defaultChecked}
             onClick={onClick}
         />
     )
@@ -46,6 +48,8 @@ RadioButton.propTypes = {
     label: PropTypes.string,
     value: PropTypes.string,
     disabled: PropTypes.bool,
+    requred: PropTypes.bool,
+    defaultChecked: PropTypes.bool,
     errorMessage: PropTypes.string,
     onClick: PropTypes.func
 }

@@ -1,19 +1,18 @@
-import React from 'react';
-import BoundingRadioButton from './BoundingRadioButton';
+import React from 'react'
+import BoundingRadioButton from './BoundingRadioButton'
 
 export default {
-  title: 'Components/Input/RadioButton/Bounding',
-  component: BoundingRadioButton,
-  
-};
+    title: 'Components/Input/RadioButton/Bounding',
+    component: BoundingRadioButton
+}
 
-const Template = (args) => <BoundingRadioButton {...args} />;
+const Template = (args) => <BoundingRadioButton {...args} />
 
-export const boundingradiobutton = Template.bind({});
+export const boundingradiobutton = Template.bind({})
 boundingradiobutton.args = {
-  label : "label",
-  value: "value",
-};
+    label: 'label',
+    value: 'value',
+    defaultChecked: true
+}
 
-boundingradiobutton.storyName="Bounding";
-
+boundingradiobutton.storyName = 'Bounding'

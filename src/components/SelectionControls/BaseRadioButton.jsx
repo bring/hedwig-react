@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function BaseRadioButton({
@@ -9,6 +9,7 @@ export default function BaseRadioButton({
     variants,
     errorMessage,
     required,
+    defaultChecked,
     onClick
 }) {
     let classes = 'hw-radio-button'
@@ -24,21 +25,24 @@ export default function BaseRadioButton({
 
     return (
         <React.Fragment>
-      <label className={classes}>
-          <input
-            type='radio'
-            name={name}
-            value={value}
-            disabled={disabled}
-            onClick={onClick}
-            required={required}
-            />
-            <span className='hw-radio-button__label'>{label}</span>
-            <i className='hw-radio-button__indicator'></i>
-        </label>
-        {errorMessage && 
-            <div class="hw-error-simple hw-error--align-left">{errorMessage}</div>
-        }
+            <label className={classes}>
+                <input
+                    type='radio'
+                    name={name}
+                    value={value}
+                    disabled={disabled}
+                    onClick={onClick}
+                    required={required}
+                    defaultChecked={defaultChecked}
+                />
+                <span className='hw-radio-button__label'>{label}</span>
+                <i className='hw-radio-button__indicator'></i>
+            </label>
+            {errorMessage && (
+                <div className='hw-error-simple hw-error--align-left'>
+                    {errorMessage}
+                </div>
+            )}
         </React.Fragment>
     )
 }
@@ -56,6 +60,8 @@ BaseRadioButton.propTypes = {
     variants: PropTypes.arrayOf(
         PropTypes.oneOf(['bounding', 'full', 'horisontal'])
     ),
+    required: PropTypes.bool,
+    defaultChecked: PropTypes.bool,
     errorMessage: PropTypes.string,
     onClick: PropTypes.func
 }
