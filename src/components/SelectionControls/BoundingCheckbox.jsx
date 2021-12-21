@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
-import FieldsetContext, { FieldsetProvider } from '../Fieldset/FieldsetContext'
+import FieldsetContext from '../Fieldset/FieldsetContext'
 import BaseCheckbox from './BaseCheckbox'
 
 export default function BoundingCheckbox({
@@ -14,9 +14,9 @@ export default function BoundingCheckbox({
     onClick
 }) {
     const variants = useContext(FieldsetContext)
-    let classes = ['bounding']
+    const classes = ['bounding']
     if (variants) {
-        var selectionControls = variants.find(
+        const selectionControls = variants.find(
             (x) => x.name === 'selectionControls'
         )
         selectionControls.value.forEach((element) => {
