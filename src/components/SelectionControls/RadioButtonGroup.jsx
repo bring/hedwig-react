@@ -31,6 +31,10 @@ export default function RadioButtonGroup({
     )
 }
 
+RadioButtonGroup.defaultProps = {
+    layout:[]
+}
+
 RadioButtonGroup.propTypes = {
     name: PropTypes.string,
     label: PropTypes.string,
