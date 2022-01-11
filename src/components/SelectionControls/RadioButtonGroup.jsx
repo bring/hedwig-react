@@ -16,7 +16,7 @@ export default function RadioButtonGroup({
             label={option.label}
             value={option.value}
             name={name}
-            onClick={(e) => callBack(e)}
+            onClick={callBack}
             key={index}
             defaultChecked={option.value === defaultSelected}
         />
