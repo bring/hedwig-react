@@ -1,6 +1,5 @@
 import React from 'react'
-import RadioButton from './RadioButton'
-import Fieldset from '../Fieldset/Fieldset'
+import BaseRadioButton from './BaseRadioButton'
 import PropTypes from 'prop-types'
 
 export default function RadioButtonGroup({
@@ -12,27 +11,27 @@ export default function RadioButtonGroup({
     layout
 }) {
     const radioButtons = options.map((option, index) => (
-        <RadioButton
+        <BaseRadioButton
             label={option.label}
             value={option.value}
             name={name}
             onClick={callBack}
             key={index}
             defaultChecked={option.value === defaultSelected}
+            variants={layout}
         />
     ))
 
     return (
         <div className='hw-block hw-block--mb-medium-2'>
-            <Fieldset legend={label} selectionControls={layout}>
-                {radioButtons}
-            </Fieldset>
+            <span className='hw-label'>{label}</span>
+            {radioButtons}
         </div>
     )
 }
 
 RadioButtonGroup.defaultProps = {
-    layout:[]
+    layout: []
 }
 
 RadioButtonGroup.propTypes = {
