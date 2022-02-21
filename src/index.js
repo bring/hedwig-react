@@ -19,6 +19,7 @@ export { default as WhiteBadge } from './components/Badge/WhiteBadge.jsx'
 export { default as TextInput } from './components/Input/TextInput.jsx'
 export { default as NumberInput } from './components/Input/NumberInput.jsx'
 export { default as PasswordInput } from './components/Input/PasswordInput.jsx'
+export { default as Textarea } from './components/Textarea/Textarea.jsx'
 
 export { default as Checkbox } from './components/SelectionControls/Checkbox.jsx'
 export { default as BoundingCheckbox } from './components/SelectionControls/BoundingCheckbox.jsx'
