@@ -11,7 +11,8 @@ export default function TextInput({
   errorMessage,
   variant,
   onChange,
-  readOnly
+  readOnly,
+  ref
 }) {
   return (
     <BaseInput
@@ -25,6 +26,7 @@ export default function TextInput({
       onChange={onChange}
       errorMessage={errorMessage}
       readOnly={readOnly}
+      ref={ref}
     />
   )
 }
