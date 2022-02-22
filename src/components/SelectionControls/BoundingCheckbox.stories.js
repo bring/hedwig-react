@@ -1,17 +1,16 @@
-import React from 'react';
-import BoundingCheckbox from './BoundingCheckbox';
+import React from 'react'
+import BoundingCheckbox from './BoundingCheckbox'
 
 export default {
-  title: 'Components/Input/Checkbox/Bounding',
-  component: BoundingCheckbox,
-};
+    title: 'Components/Input/Checkbox/Bounding',
+    component: BoundingCheckbox
+}
 
-const Template = (args) => <BoundingCheckbox {...args} />;
+const Template = (args) => <BoundingCheckbox {...args} />
 
-export const cbox = Template.bind({});
+export const cbox = Template.bind({})
 cbox.args = {
-  label : "label",
-};
+    label: 'label'
+}
 
-cbox.storyName="Bounding";
-
+cbox.storyName = 'Bounding'

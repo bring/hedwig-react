@@ -4,6 +4,7 @@ import BaseInput from './BaseInput'
 
 export default function NumberInput({
   name,
+  id,
   label,
   placeholder,
   min,
@@ -18,6 +19,7 @@ export default function NumberInput({
   return (
     <BaseInput
       name={name}
+      id={id}
       variant={variant}
       label={label}
       type='number'
@@ -39,6 +41,7 @@ NumberInput.defaultProps = {
 
 NumberInput.propTypes = {
   name:PropTypes.string,
+  id:PropTypes.string,
   variant: PropTypes.oneOf(['', 'white', 'line']),
   disabled: PropTypes.bool,
   readOnly: PropTypes.bool,
