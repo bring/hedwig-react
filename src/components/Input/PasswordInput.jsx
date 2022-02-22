@@ -4,6 +4,7 @@ import BaseInput from './BaseInput'
 
 export default function PasswordInput({
   name,
+  id,
   label,
   placeholder,
   variant,
@@ -14,6 +15,7 @@ export default function PasswordInput({
   return (
     <BaseInput
       name={name}
+      id={id}
       variant={variant}
       label={label}
       type='password'
@@ -31,6 +33,8 @@ PasswordInput.defaultProps = {
 }
 
 PasswordInput.propTypes = {
+  name:PropTypes.string,
+  id:PropTypes.string,
   variant: PropTypes.oneOf(['', 'white', 'line']),
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
