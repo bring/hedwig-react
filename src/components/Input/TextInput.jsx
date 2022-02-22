@@ -4,6 +4,7 @@ import BaseInput from './BaseInput'
 
 export default function TextInput({
   name,
+  id,
   label,
   placeholder,
   disabled,
@@ -17,6 +18,7 @@ export default function TextInput({
   return (
     <BaseInput
       name={name}
+      id={id}
       label={label}
       type='text'
       variant={variant}
@@ -37,6 +39,7 @@ TextInput.defaultProps = {
 
 TextInput.propTypes = {
   name: PropTypes.string,
+  id:PropTypes.string,
   variant: PropTypes.oneOf(['', 'white', 'line']),
   disabled: PropTypes.bool,
   readOnly: PropTypes.bool,

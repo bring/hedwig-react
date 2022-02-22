@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 export default function BaseInput({
     name,
+    id,
     label,
     placeholder,
     type,
@@ -29,6 +30,7 @@ export default function BaseInput({
             {label}
             <input
                 name={name}
+                id={id}
                 className={'hw-input ' + variation}
                 type={type}
                 min={min}
@@ -59,6 +61,7 @@ BaseInput.defaultProps = {
 
 BaseInput.propTypes = {
     name: PropTypes.string,
+    id:PropTypes.string,
     type: PropTypes.oneOf(['text', 'number', 'password']),
     onChange: PropTypes.func,
     variant: PropTypes.oneOf(['white', 'line', '']),
