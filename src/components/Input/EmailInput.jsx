@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import BaseInput from './BaseInput'
 
-export default function TextInput({
+export default function EmailInput({
   name,
   id,
   label,
@@ -20,7 +20,7 @@ export default function TextInput({
       name={name}
       id={id}
       label={label}
-      type='text'
+      type='email'
       variant={variant}
       placeholder={placeholder}
       maxLength={maxLength}
@@ -32,11 +32,11 @@ export default function TextInput({
   )
 }
 
-TextInput.defaultProps = {
+EmailInput.defaultProps = {
   disabled: false
 }
 
-TextInput.propTypes = {
+EmailInput.propTypes = {
   name: PropTypes.string,
   id:PropTypes.string,
   variant: PropTypes.oneOf(['', 'white', 'line']),
