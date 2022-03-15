@@ -8,10 +8,16 @@ export default function BaseDropdown({
     id,
     selected,
     onChange,
-    options
+    options,
+    errorMessage
 }) {
-    const variantClass = variant == 'white' ? 'hw-dropdown--white' : ''
-    const labelClass = variant == 'line' ? 'hw-label--line' : ''
+    let variation = variant == 'white' ? 'hw-dropdown--white' : ''
+    let labelVariation = variant === 'line' ? 'hw-label--line' : ''
+    if (errorMessage !== '') {
+        variation += ' hw-input--error'
+        labelVariation += ' hw-label--error'
+    }
+
     var items = ''
     if (options) {
         items = options.map((item, index) => (
@@ -23,11 +29,11 @@ export default function BaseDropdown({
     }
 
     return (
-        <label className={`hw-label ${labelClass}`}>
+        <label className={`hw-label ${labelVariation}`}>
             {label}
             <select
                 name={name}
-                className={`hw-dropdown hw-dropdown--native ${variantClass}`}
+                className={`hw-dropdown hw-dropdown--native ${variation}`}
                 id={id}
                 value={selected}
                 data-hw-dropdown={id}
@@ -35,15 +41,25 @@ export default function BaseDropdown({
             >
                 {items}
             </select>
+            {errorMessage && (
+                <div className='hw-error hw-error--align-left hw-error--indented'>
+                    {errorMessage}
+                </div>
+            )}
         </label>
     )
 }
 
 BaseDropdown.defaultProps = {
     variant: '',
-    options: []
+    options: [],
+    errorMessage: '',
 }
 
 BaseDropdown.propTypes = {
-    variant: PropTypes.oneOf(['', 'white', 'line'])
+    label: PropTypes.string,
+    id: PropTypes.string,
+    variant: PropTypes.oneOf(['', 'white', 'line']),
+    errorMessage: PropTypes.string,
+    onChange: PropTypes.func
 }
