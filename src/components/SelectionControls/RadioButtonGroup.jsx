@@ -8,7 +8,8 @@ export default function RadioButtonGroup({
     label,
     defaultSelected,
     callBack,
-    layout
+    layout,
+    errorMessage
 }) {
     const radioButtons = options.map((option, index) => (
         <BaseRadioButton
@@ -26,6 +27,11 @@ export default function RadioButtonGroup({
         <div className='hw-block hw-block--mb-medium-2'>
             <span className='hw-label'>{label}</span>
             {radioButtons}
+            {errorMessage && (
+                <div className='hw-error-simple hw-error--align-left'>
+                    {errorMessage}
+                </div>
+            )}
         </div>
     )
 }
@@ -41,5 +47,6 @@ RadioButtonGroup.propTypes = {
     callBack: PropTypes.func,
     layout: PropTypes.arrayOf(
         PropTypes.oneOf(['bounding', 'full', 'horisontal'])
-    )
+    ),
+    errorMessage: PropTypes.string
 }
