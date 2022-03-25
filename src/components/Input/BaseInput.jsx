@@ -61,8 +61,8 @@ BaseInput.defaultProps = {
 
 BaseInput.propTypes = {
     name: PropTypes.string,
-    id:PropTypes.string,
-    type: PropTypes.oneOf(['text', 'number', 'password']),
+    id: PropTypes.string,
+    type: PropTypes.oneOf(['text', 'number', 'password', 'email']),
     onChange: PropTypes.func,
     variant: PropTypes.oneOf(['white', 'line', '']),
     maxLength: PropTypes.number,
