@@ -10,7 +10,8 @@ export default function Dropdown({
     selected,
     onChange,
     options,
-    errorMessage
+    errorMessage,
+    ariaControls
 }) {
     return (
         <BaseDropdown
@@ -22,6 +23,7 @@ export default function Dropdown({
             onChange={onChange}
             options={options}
             errorMessage={errorMessage}
+            ariaControls={ariaControls}
         />
     )
 }
@@ -32,5 +34,6 @@ Dropdown.propTypes = {
     id: PropTypes.string,
     variant: PropTypes.oneOf(['', 'white', 'line']),
     onChange: PropTypes.func,
-    errorMessage: PropTypes.string
+    errorMessage: PropTypes.string,
+    ariaControls: PropTypes.string
 }
