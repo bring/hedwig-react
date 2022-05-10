@@ -9,7 +9,8 @@ export default function BaseDropdown({
     selected,
     onChange,
     options,
-    errorMessage
+    errorMessage,
+    ariaControls
 }) {
     let variation = variant == 'white' ? 'hw-dropdown--white' : ''
     let labelVariation = variant === 'line' ? 'hw-label--line' : ''
@@ -38,6 +39,7 @@ export default function BaseDropdown({
                 value={selected}
                 data-hw-dropdown={id}
                 onChange={onChange}
+                aria-controls={ariaControls}
             >
                 {items}
             </select>
@@ -61,5 +63,6 @@ BaseDropdown.propTypes = {
     id: PropTypes.string,
     variant: PropTypes.oneOf(['', 'white', 'line']),
     errorMessage: PropTypes.string,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+    ariaControls: PropTypes.string
 }
