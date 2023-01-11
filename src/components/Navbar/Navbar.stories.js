@@ -10,6 +10,7 @@ import NavbarSearchButton from './NavbarSearchButton'
 import NavbarSearch from './NavbarSearch'
 import NavbarMenuButton from './NavbarMenuButton'
 import NavbarMenuDrawer from './NavbarMenuDrawer'
+import NavbarLogoFlagship from './NavbarLogoFlagship'
 import Block from '../../layout/Block/Block'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/pro-regular-svg-icons'
@@ -167,3 +168,34 @@ const Template = (args) => (
 )
 
 export const Default = Template.bind({})
+
+const TemplateFlagship = (args) => (
+    <div style={{ height: '600px' }}>
+        <Navbar {...args}>
+            <NavbarLogoFlagship
+                title='Posten logo'
+                logo='posten'
+                href='#'
+                ariaLabel='Go to homepage'
+                flagship='Signering'
+            />
+            <NavbarSkipToMain title='Skip to main content' href='#main' />
+            <NavbarMenu>
+                <NavbarMenuButton
+                    menuName='Menu'
+                    menuTitle='Show menu'
+                    closeName='Close'
+                    closeTitle='Close menu'
+                />
+                <NavbarMenuDrawer
+                    selectorItems={selectorItems}
+                    featuredLinks={featuredLinks}
+                    menuSections={menuSections}
+                    loginLink={{ href: '#', text: 'Min side' }}
+                />
+            </NavbarMenu>
+        </Navbar>
+    </div>
+)
+
+export const Flagship = TemplateFlagship.bind({})
