@@ -51,5 +51,6 @@ export { default as AccordionItem } from './components/Accordion/AccordionItem.j
 
 export { default as StandaloneSearch } from './components/Search/StandaloneSearch.jsx'
 export { default as SearchSuggestion } from './components/Search/SearchSuggestion.jsx'
+export { default as Trace } from './components/Search/Trace.jsx'
 
 export { default as Tab } from './components/Tab/Tab.jsx'
