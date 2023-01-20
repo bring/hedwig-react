@@ -39,7 +39,7 @@ export default function Trace({
                     value={inputValue}
                     onChange={(e) => {
                         handleInput(e)
-                        onChange()
+                        onChange(e)
                     }}
                     placeholder={placeholder}
                     aria-label={ariaLabel}
