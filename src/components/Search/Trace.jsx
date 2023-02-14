@@ -31,10 +31,10 @@ export default function Trace({
     }
 
     return (
-        <div class={'hw-trace hw-trace' + classes}>
-            <div class='hw-trace__inner'>
+        <div className={'hw-trace hw-trace' + classes}>
+            <div className='hw-trace__inner'>
                 <input
-                    class='hw-trace__input '
+                    className='hw-trace__input '
                     type='text'
                     value={inputValue}
                     onChange={(e) => {
@@ -55,7 +55,7 @@ export default function Trace({
             </div>
             <button
                 type='submit'
-                class='hw-button hw-button--primary hw-trace__button'
+                className='hw-button hw-button--primary hw-trace__button'
             >
                 {buttonLabel}
             </button>
