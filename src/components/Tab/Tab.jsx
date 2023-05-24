@@ -43,7 +43,9 @@ export default function Tab({ items, selected, onClick }) {
     function Item({ id, content }) {
         return (
             <a
-                className='hw-tab__item'
+                className={`hw-tab__item${
+                    id === selectedItem ? ' hw-tab__item--selected' : ''
+                }`}
                 ref={selectedItem === id ? selectedRef : null}
                 onClick={() => handleClick(id)}
                 role='tab'
